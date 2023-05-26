@@ -1,0 +1,3 @@
+DROP DATABASE IF EXISTS aKicks_db;
+CREATE DATABASE aKicks_db;
+
