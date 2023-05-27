@@ -1,5 +1,5 @@
 
-const [Model, DataTypes]=  require('sequelize')
+const { Model, DataTypes } = require('sequelize');
 
 const sequelize= require('../config/connection')
 
@@ -18,7 +18,7 @@ Products.init({
     },
     image:{
         type:DataTypes.STRING,
-        allowNull:false
+        allowNull:true
     },
     price:{
         type:DataTypes.INTEGER,
@@ -28,20 +28,20 @@ Products.init({
         }
     },
     size:{
-        type:DataTypes.ARRAY,
+        type:DataTypes.STRING,
         allowNull:false
     },
     cart_id:{
         type:DataTypes.INTEGER,
-        allowNull:false,
+        allowNull:true,
         references:{
             model:"cart",
-            key:id
+            key:"id"
         }
     },
     brands_id:{
         type:DataTypes.INTEGER,
-        allowNull:false,
+        allowNull:true,
         references:{
             model:"brands",
             key:"id"
