@@ -21,6 +21,15 @@ Products.belongsTo(Cart,{
     foreignKey:"cart_id"
 })
 
+// Products.hasOne(Cart,{
+//     foreignKey:"products_id",
+//     onDelete:"CASCADE"
+// })
+
+// Cart.belongsTo(Products,{
+//     foreignKey:"products_id"
+// })
+
 Brands.hasMany(Products,{
     foreignKey:"brands_id",
     onDelete:"CASCADE"

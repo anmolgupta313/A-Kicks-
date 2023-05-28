@@ -17,8 +17,15 @@ Cart.init({
         references:{
             model:"users",
             key:"id"
-        }
-    }
+        }},
+    //    products_id:{
+    //         type:DataTypes.INTEGER,
+    //         allowNull:true,
+    //         references:{
+    //             model:"products",
+    //             key:"id"
+    //         }
+    // }
 },
 {
     sequelize,
