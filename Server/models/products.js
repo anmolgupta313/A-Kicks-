@@ -1,60 +1,60 @@
+const { Model, DataTypes } = require("sequelize");
 
-const { Model, DataTypes } = require('sequelize');
+const sequelize = require("../config/connection");
 
-const sequelize= require('../config/connection')
+class Products extends Model {}
 
-class Products extends Model{}
-
-Products.init({
-    id:{
-        type:DataTypes.INTEGER,
-        allowNull:false,
-        autoIncrement:true,
-        primaryKey:true
+Products.init(
+  {
+    id: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+      autoIncrement: true,
+      primaryKey: true,
     },
-    productName:{
-        type:DataTypes.STRING,
-        allowNull:false,
+    productName: {
+      type: DataTypes.STRING,
+      allowNull: false,
     },
-    image:{
-        type:DataTypes.STRING,
-        allowNull:true
+    image: {
+      type: DataTypes.STRING,
+      allowNull: true,
     },
-    price:{
-        type:DataTypes.INTEGER,
-        allowNull:false,
-        validate:{
-            isDecimal:true
-        }
+    price: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+      validate: {
+        isDecimal: true,
+      },
     },
-    size:{
-        type:DataTypes.STRING,
-        allowNull:false
+    size: {
+      type: DataTypes.STRING,
+      allowNull: false,
     },
-    cart_id:{
-        type:DataTypes.INTEGER,
-        allowNull:true,
-        references:{
-            model:"cart",
-            key:"id"
-        }
+    cart_id: {
+      type: DataTypes.INTEGER,
+      allowNull: true,
+      references: {
+        model: "cart",
+        key: "id",
+      },
     },
-    brands_id:{
-        type:DataTypes.INTEGER,
-        allowNull:true,
-        references:{
-            model:"brands",
-            key:"id"
-        }
-    }
-},
-{
+    brands_id: {
+      type: DataTypes.INTEGER,
+      allowNull: true,
+      references: {
+        model: "brands",
+        key: "id",
+      },
+    },
+  },
+  {
     sequelize,
-    timestamps:false,
-    freezeTableName:true,
-    underscored:true,
-    modelName:"products"
-})
+    timestamps: false,
+    freezeTableName: true,
+    underscored: true,
+    modelName: "products",
+  }
+);
 
-
-module.exports= Products;
+module.exports = Products;

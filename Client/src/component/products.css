@@ -1,0 +1,37 @@
+.main-products-div {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    column-gap: 40px;
+    padding: 0px 20px;
+}
+
+.main-single-product-div {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1;
+    box-shadow: 0px 6px 20px 4px #0000002e;
+    padding: 20px;
+    border-radius: 6px;
+}
+
+.product-name-div p{
+    font-size: 18px;
+    font-weight: 600;
+    margin: 0px;
+    padding-top: 20px;
+}
+
+.product-price-div p {
+    font-size: 17px;
+    font-weight: 500;
+}
+
+button.single.product-btn {
+    padding: 14px;
+    background-color: black;
+    border: none;
+    color: white;
+    border-radius: 7px;
+}

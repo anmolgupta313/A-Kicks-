@@ -9,11 +9,11 @@ app.use(cors());
 const PORT = process.env.PORT || 3001;
  
 
-// const  corsOptions = {
-//   origin: "http://localhost:3001"
-// };
+const  corsOptions = {
+  origin: "http://localhost:3001"
+};
 
-
+app.use(cors(corsOptions))
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));

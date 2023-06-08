@@ -21,8 +21,16 @@ const postUser = await Users.create({
    userName:req.body.userName,
     password:req.body.password
 })
-
-res.status(200).json(postUser)
+debugger
+const userCart = await Cart.create({
+    users_id:postUser.dataValues.id
+})
+console.log(postUser.dataValues,"datavalues");
+res.status(200).json({
+    id: postUser.dataValues.id,
+    userName: postUser.dataValues.userName,
+    cartId: userCart.dataValues.id
+    })
     }catch(err){
         res.status(500).json(err)
     }

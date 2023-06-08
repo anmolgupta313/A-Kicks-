@@ -6,6 +6,9 @@ import Header from "./component/header";
 import Home from "./component/home";
 import {BrowserRouter, Route, Routes} from "react-router-dom"
 import Test from "./component/test";
+import Products from "./component/products";
+
+import Signup from "./component/signup";
 // import react
 // import { use } from '../../Server/routes';
 
@@ -18,6 +21,8 @@ return(
   <Routes>
   <Route path="/" Component={Home} />
   <Route path="/test" Component={Test} />
+  <Route path="/products" Component={Products} />
+  <Route path="/signUp" Component={Signup} />
   </Routes>
 </div>
 </BrowserRouter>)
