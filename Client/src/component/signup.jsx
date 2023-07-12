@@ -89,7 +89,7 @@ return setformData((prev)=>{
     // console.log(formData)
     return(<div className="form-main-div">
         <form action="" onSubmit={userCartApi}>
-            <input onChange={onChange} type="email" name="email" id="email" value={formData.email} />
+            <input onChange={onChange} type="text" name="email" id="email" value={formData.email} />
             <input onChange={onChange} type="password" name="password" id="password"  value={formData.password} />
             <button type="submit">SignUp</button>
         </form>

@@ -5,6 +5,7 @@ const {Cart, Users}= require('../../models')
 
 const bcrypt= require('bcrypt');
 
+const {createTokens,validateToken}= require('../../JWT/jwt')
 router.get('/',async(req,res)=>{
     try{
 const getUsers= await Users.findAll({include:[{model:Cart}]})
@@ -37,5 +38,41 @@ res.status(200).json({
         res.status(500).json(err)
     }
 })
+
+router.post('/login', async(req,res)=>{
+    try{
+
+        // const {userName,password}= req.body
+        const loginUser= await Users.findOne({where:{userName:req.body.userName}})
+
+        if(!loginUser){
+            res.status(400).json({err:"Wrong Email"})
+        }
+            
+            const dbPassword= loginUser.password
+
+            bcrypt.compare(req.body.password,dbPassword).then((match)=>{
+                if(!match){
+                    res.status(400).json({message:"Wrong Password"})
+                }else{
+                    const accessToken= createTokens(loginUser)
+
+                    res.cookie('access-token',accessToken,{
+                        maxAge:60*60*24*30*1000
+                    })
+                    res.status(200).json(loginUser)}
+            })
+
+       
+    } catch(err){
+        res.status(500).json(err)
+    }
+
+})
+
+router.get('/profie',validateToken,(req,res)=>{
+    res.json({message:"ammlol"})
+})
+     
 
 module.exports= router;

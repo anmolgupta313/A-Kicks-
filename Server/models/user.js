@@ -15,6 +15,7 @@ Users.init(
         userName:{
             type:DataTypes.STRING,
             allowNull:false,
+            unique:true,
             validate:{
                 len:[6]
             }
