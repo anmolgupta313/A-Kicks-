@@ -1,7 +1,7 @@
 const router= require('express').Router();
 
 const {Products, Cart, Brands}= require('../../models')
-
+// const {validateToken}= require('../../JWT/jwt')
 router.get('/', async(req,res)=>{
 
 try{
@@ -25,6 +25,19 @@ if(!getProductById){
         res.status(500).json(err)
     }
 })
+// router.post('/addtocart', async(req,res)=>{
+//     try{
+// const addToCart= await Products.create({
+//     cart_id: Cart.dataValues.id
+// })
+// console.log(Cart.dataValues.id, "Add To Cart")
+// res.status(200).json(addToCart)
+//     }catch(err){
+//         res.status(500).json(err)
+//     }
+// })
+
+
 
 router.put("/:id",async(req,res)=>{
     try{

@@ -9,6 +9,7 @@ import Test from "./component/test";
 import Products from "./component/products";
 
 import Signup from "./component/signup";
+import Login from "./component/login"
 // import react
 // import { use } from '../../Server/routes';
 
@@ -23,6 +24,7 @@ return(
   <Route path="/test" Component={Test} />
   <Route path="/products" Component={Products} />
   <Route path="/signUp" Component={Signup} />
+  <Route path="/logIn" Component={Login} />
   </Routes>
 </div>
 </BrowserRouter>)

@@ -3,6 +3,23 @@ import React from "react";
 export default function SingleProduct(props) {
   console.log(props, "Props");
   console.log(props.products.productName, "ProductName");
+
+  function click(e){
+    // const userId= localStorage.getItem("userId")
+    // const cartId=localStorage.getItem("cartId")
+    const prodyctId=props.products.id
+const buttonValue= e.target.value
+    if(prodyctId==buttonValue){
+console.log("wgf")
+    }else{
+      console.log(prodyctId)
+    }
+    
+
+  }
+
+
+
   return (
     <div className="main-single-product-div">
       <div className="product-img-div">
@@ -14,7 +31,7 @@ export default function SingleProduct(props) {
       <div className="product-price-div">
         <p>${props.products.price}</p>
       </div>
-      <button className="single product-btn">Add To Cart</button>
+      <button onClick={click} className="single product-btn" value={props.products.id}>Add To Cart</button>
     </div>
   );
 }

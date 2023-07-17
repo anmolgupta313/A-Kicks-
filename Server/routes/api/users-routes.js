@@ -1,7 +1,7 @@
 const router = require('express').Router()
 
 
-const {Cart, Users}= require('../../models')
+const {Cart,Products, Users}= require('../../models')
 
 const bcrypt= require('bcrypt');
 
@@ -34,6 +34,7 @@ res.status(200).json({
     userName: postUser.dataValues.userName,
     cartId: userCart.dataValues.id
     })
+    
     }catch(err){
         res.status(500).json(err)
     }
@@ -43,7 +44,7 @@ router.post('/login', async(req,res)=>{
     try{
 
         // const {userName,password}= req.body
-        const loginUser= await Users.findOne({where:{userName:req.body.userName}})
+        const loginUser= await Users.findOne({where:{userName:req.body.userName},include:[{model:Cart}]})
 
         if(!loginUser){
             res.status(400).json({err:"Wrong Email"})
@@ -60,7 +61,14 @@ router.post('/login', async(req,res)=>{
                     res.cookie('access-token',accessToken,{
                         maxAge:60*60*24*30*1000
                     })
-                    res.status(200).json(loginUser)}
+                    // console.log(loginUser.dataValues.userName,"dloginatavalues");
+                    res.status(200).json( {
+                        userName:loginUser.dataValues.userName,
+                        cartId:loginUser.cart.id,
+                        token:accessToken
+                    })}
+                 
+                   
             })
 
        
@@ -69,6 +77,7 @@ router.post('/login', async(req,res)=>{
     }
 
 })
+
 
 router.get('/profie',validateToken,(req,res)=>{
     res.json({message:"ammlol"})
