@@ -10,7 +10,7 @@ const productsData = [
     price: 500,
     size: "4",
     brands_id: 1,
-    cart_id: 1,
+    
   },
   {
     productName: "Air Jordan 1 High Travis Scott Mocha",
@@ -18,7 +18,7 @@ const productsData = [
     price: 2200,
     size: "4",
     brands_id: 1,
-    cart_id: 1,
+   
   },
   {
     productName: "Air Jordan 1 High Travis Scott Fragments",
