@@ -10,6 +10,7 @@ import Products from "./component/products";
 
 import Signup from "./component/signup";
 import Login from "./component/login"
+import Cart from "./component/cart";
 // import react
 // import { use } from '../../Server/routes';
 
@@ -24,6 +25,7 @@ return(
   <Route path="/test" Component={Test} />
   <Route path="/products" Component={Products} />
   <Route path="/signUp" Component={Signup} />
+  <Route path="/cart" Component={Cart} />
   <Route path="/logIn" Component={Login} />
   </Routes>
 </div>

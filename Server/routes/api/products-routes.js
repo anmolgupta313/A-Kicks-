@@ -38,7 +38,6 @@ if(!getProductById){
 // })
 
 // router.post('/addtocart', async(req,res)=>{
-//     try{
 // const postProducts
 //     }catch(err){
 //         res.status(500).json(err)

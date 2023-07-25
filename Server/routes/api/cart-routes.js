@@ -13,7 +13,22 @@ res.status(200).json(getCart);
 })
 
 
-router.put('id',async(req,res)=>{
+router.get('/:id', async(req,res)=>{
+    try{
+const getCartById= await Cart.findByPk(req.params.id,{include:[{model:Products}]})
+
+if(!getCartById){
+    res.status(404).json({message:"Invalid Id"})
+}else{
+    res.status(200).json(getCartById)
+}
+    }catch(err){
+        res.status(500).json(err)
+    }
+})
+
+
+router.put('/:id',async(req,res)=>{
     try{
 const getCartById= Cart.findByPk(req.body,{include:[{model:Users}]})
 
