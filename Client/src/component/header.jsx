@@ -30,10 +30,10 @@ export default function Header() {
         ) : (
           ""
         )}
-
-        <li>
+{Auth.loggedIn()? (  <li>
           <Link to="/cart">Cart</Link>
-        </li>
+        </li>):("")}
+      
       </ul>
     </div>
   );

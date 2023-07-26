@@ -27,6 +27,11 @@ Products.init(
         isDecimal: true,
       },
     },
+    quantity:{
+      type:DataTypes.INTEGER,
+      allowNull:true
+    }
+    ,
     size: {
       type: DataTypes.STRING,
       allowNull: false,

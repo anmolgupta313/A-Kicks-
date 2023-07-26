@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react"
+import SingleCart from "./singlecart";
 export default function Cart(){
-    const [cart,setCart]=useState("")
+    const [cart,setCart]=useState([])
     useEffect(() => {
         const cartId= localStorage.getItem('cartId')
         async function fetchData() {
@@ -14,7 +15,8 @@ export default function Cart(){
             const res = await getCart.json();
             //  console.log(res)
     
-            setCart(res);
+            setCart(res.products);
+       
           } catch (err) {
             console.log(err, "err");
           }
@@ -22,7 +24,13 @@ export default function Cart(){
         fetchData();
 
       }, []);
+
+      console.log(cart,"cart")
+
+  
     return(
-<div>{cart.products[0].id}</div>
+<div className="cart-main-div">{cart.map((api)=>{
+  return<SingleCart cart={api} />
+})}</div> 
     )
 }

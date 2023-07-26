@@ -28,6 +28,16 @@
     font-weight: 500;
 }
 
+.select-cart-div-main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.select {
+    padding: 6px;
+}
+
 button.single.product-btn {
     padding: 14px;
     background-color: black;
