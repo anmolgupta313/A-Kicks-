@@ -1,8 +1,9 @@
 import { Link } from "react-router-dom";
+import "./header.css"
 import Auth from "../utils/auth";
 export default function Header() {
   return (
-    <div>
+    <div className="nav-main-div">
       <ul>
         <li>
           <Link to="/">Home</Link>

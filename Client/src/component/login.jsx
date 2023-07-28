@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Auth from "../utils/auth"
+import "./signup.css"
 import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 
@@ -72,6 +73,7 @@ return setformData((prev)=>{
 
 
     return(<div className="form-main-div">
+      <div><h1>Log <mark className="mark">In</mark></h1></div>
         <form action="" onSubmit={loginApi}>
             <input onChange={onChange} type="text" name="email" id="email" value={formData.email} />
             <input onChange={onChange} type="password" name="password" id="password"  value={formData.password} />

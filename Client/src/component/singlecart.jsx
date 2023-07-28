@@ -31,14 +31,36 @@ const updateProduct=   fetch(`http://localhost:3001/api/products/${buttonValue}`
     // console.log(quantityvalue, "Quantityvalue");
   }
 
+  // function clickDel(e){
+  //   const cartRemove=0
+
+  //   const buttonValue= e.target.value
+  //   const delProduct=   fetch(`http://localhost:3001/api/products/${buttonValue}`,{
+  //             method:"PUT",
+  //             body:JSON.stringify({
+  //               cart_id:"0",
+  //               quantity:"0"
+               
+  //           }),
+  //           headers:{"Content-type":"application/json"}
+  //           })
+    
+  //         if(delProduct){
+  //           // console.log("perfect");
+  //           console.log(buttonValue,"valuebutn")
+  //       }else{
+  //           console.log("not working");
+  //       }
+  //   }
+
   return (
     <div className="single-cart-main-div">
       <div className="single-cart-sub-div">
         <img src={props.cart.image}></img>
       </div>
       <div className="single-cart-sub-div">
-        <div>{props.cart.productName}</div>
-        <div>{props.cart.size}</div>
+        <div className="title-product-name">{props.cart.productName}</div>
+        <div className="size">Size {props.cart.size}</div>
       </div>
         <div className="single-cart-sub-div">
           <select className="select" onChange={onChange}>
@@ -65,6 +87,7 @@ const updateProduct=   fetch(`http://localhost:3001/api/products/${buttonValue}`
           >
             Update Cart
           </button></div>
+          <div ><button  className="x" value={props.cart.id}>x</button></div>
     </div>
   );
 

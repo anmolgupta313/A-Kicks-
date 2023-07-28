@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useEffect } from "react";
-
+import"./signup.css"
 // import { createUserWithEmailAndPassword } from "firebase/auth";
 // import { auth } from "./firebase";
 
@@ -88,6 +88,7 @@ return setformData((prev)=>{
     // }
     // console.log(formData)
     return(<div className="form-main-div">
+      <div><h1>Sign <mark className="mark">Up</mark></h1></div>
         <form action="" onSubmit={userCartApi}>
             <input onChange={onChange} type="text" name="email" id="email" value={formData.email} />
             <input onChange={onChange} type="password" name="password" id="password"  value={formData.password} />

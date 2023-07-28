@@ -8,7 +8,25 @@
     align-items: center;
     justify-content: space-evenly;
     flex: 1 1 auto;
+    padding: 10px 0px;
 }
 .single-cart-sub-div {
     width: 100%;
+}
+
+.title-product-name {
+    font-size: 17px;
+    font-weight: 600;
+    line-height: 26px;
+}
+
+.size {
+    font-size: 14px;
+    color: #4a4a4a;
+}
+
+.x {
+    border: solid;
+    padding: 10px;
+    border-radius: 8px;
 }

@@ -1,0 +1,35 @@
+.form-main-div {
+    display: flex;
+    flex-direction: column;
+    row-gap: 27px;
+    align-items: center;
+    padding-top: 100px;
+}
+
+.form-main-div form {
+    display: flex;
+    flex-direction: column;
+    row-gap: 12px;
+    width: 25%;
+}
+
+.mark{
+    color: #6bb9e6;
+    background-color: transparent;
+}
+.form-main-div form input {
+    padding: 8px;
+    border-radius: 3px;
+    border-color: transparent;
+    background-color: #E7F0FE !important;
+}
+
+.form-main-div form button {
+    padding: 8px;
+    background-color: #6bb9e6;
+    border: none;
+    border-radius: 3px;
+    color: white;
+    font-size: 17px;
+    font-weight: 500;
+}
