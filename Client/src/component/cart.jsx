@@ -8,14 +8,14 @@ export default function Cart(){
           try {
 
            
-            const getCart = await fetch(`http://localhost:3001/api/cart/${cartId}`, {
+            const getCart = await fetch(`http://localhost:3001/api/shoppingcartitem/cartt/${cartId}`, {
               method: "GET",
               headers: { "Content-type": "application/json" },
             });
             const res = await getCart.json();
             //  console.log(res)
     
-            setCart(res.products);
+            setCart(res);
        
           } catch (err) {
             console.log(err, "err");

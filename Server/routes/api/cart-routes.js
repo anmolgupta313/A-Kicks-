@@ -1,6 +1,6 @@
 const router= require('express').Router();
 
-const {Users,Cart,Products}= require('../../models');
+const {Users,Cart,Products,ShoppingCart}= require('../../models');
 
 router.get('/',async(req,res)=>{
     try{
@@ -15,7 +15,7 @@ res.status(200).json(getCart);
 
 router.get('/:id', async(req,res)=>{
     try{
-const getCartById= await Cart.findByPk(req.params.id,{include:[{model:Products}]})
+const getCartById= await Cart.findByPk(req.params.id,{include:[{model:ShoppingCart}]})
 
 if(!getCartById){
     res.status(404).json({message:"Invalid Id"})
@@ -26,6 +26,9 @@ if(!getCartById){
         res.status(500).json(err)
     }
 })
+
+
+
 
 
 router.put('/:id',async(req,res)=>{

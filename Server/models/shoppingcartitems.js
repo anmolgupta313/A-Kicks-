@@ -2,38 +2,15 @@ const { Model, DataTypes } = require("sequelize");
 
 const sequelize = require("../config/connection");
 
-class Products extends Model {}
+class ShoppingCart extends Model {}
 
-Products.init(
+ShoppingCart.init(
   {
     id: {
       type: DataTypes.INTEGER,
       allowNull: false,
       autoIncrement: true,
       primaryKey: true,
-    },
-    productName: {
-      type: DataTypes.STRING,
-      allowNull: false,
-    },
-    image: {
-      type: DataTypes.STRING,
-      allowNull: true,
-    },
-    price: {
-      type: DataTypes.INTEGER,
-      allowNull: false,
-      validate: {
-        isDecimal: true,
-      },
-    },
-    quantity: {
-      type: DataTypes.INTEGER,
-      allowNull: true,
-    },
-    size: {
-      type: DataTypes.STRING,
-      allowNull: false,
     },
     cart_id: {
       type: DataTypes.INTEGER,
@@ -43,13 +20,17 @@ Products.init(
         key: "id",
       },
     },
-    brands_id: {
+    products_id: {
       type: DataTypes.INTEGER,
       allowNull: true,
       references: {
-        model: "brands",
+        model: "products",
         key: "id",
       },
+    },
+    quantity: {
+      type: DataTypes.INTEGER,
+      allowNull: true,
     },
   },
   {
@@ -57,8 +38,8 @@ Products.init(
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: "products",
+    modelName: "shoppingcart",
   }
 );
 
-module.exports = Products;
+module.exports = ShoppingCart;

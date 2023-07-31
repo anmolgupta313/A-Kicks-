@@ -8,10 +8,9 @@ export default function SingleCart(props) {
 
     function click(e){
 const buttonValue= e.target.value
-const updateProduct=   fetch(`http://localhost:3001/api/products/${buttonValue}`,{
+const updateProduct=   fetch(`http://localhost:3001/api/shoppingcartitem/${buttonValue}`,{
           method:"PUT",
           body:JSON.stringify({
-            cart_id:cartId,
             quantity:selectValue
            
         }),
@@ -19,7 +18,7 @@ const updateProduct=   fetch(`http://localhost:3001/api/products/${buttonValue}`
         })
 
       if(updateProduct){
-        // console.log("perfect");
+        console.log("perfect");
     }else{
         console.log("not working");
     }
@@ -31,27 +30,22 @@ const updateProduct=   fetch(`http://localhost:3001/api/products/${buttonValue}`
     // console.log(quantityvalue, "Quantityvalue");
   }
 
-  // function clickDel(e){
-  //   const cartRemove=0
+  function clickDel(e){
+    // const cartRemove=0
 
-  //   const buttonValue= e.target.value
-  //   const delProduct=   fetch(`http://localhost:3001/api/products/${buttonValue}`,{
-  //             method:"PUT",
-  //             body:JSON.stringify({
-  //               cart_id:"0",
-  //               quantity:"0"
-               
-  //           }),
-  //           headers:{"Content-type":"application/json"}
-  //           })
+    const buttonValue= e.target.value
+    const delProduct=   fetch(`http://localhost:3001/api/shoppingcartitem/${buttonValue}`,{
+              method:"DELETE",
+            headers:{"Content-type":"application/json"}
+            })
     
-  //         if(delProduct){
-  //           // console.log("perfect");
-  //           console.log(buttonValue,"valuebutn")
-  //       }else{
-  //           console.log("not working");
-  //       }
-  //   }
+          if(delProduct){
+            // console.log("perfect");
+            console.log(buttonValue,"valuebutn")
+        }else{
+            console.log("not working");
+        }
+    }
 
   return (
     <div className="single-cart-main-div">
@@ -87,7 +81,7 @@ const updateProduct=   fetch(`http://localhost:3001/api/products/${buttonValue}`
           >
             Update Cart
           </button></div>
-          <div ><button  className="x" value={props.cart.id}>x</button></div>
+          <div ><button  onClick={clickDel} className="x" value={props.cart.id}>x</button></div>
     </div>
   );
 

@@ -1,47 +1,59 @@
-const Brands= require('./brands')
-const Cart= require('./cart')
-const Users = require('./user')
-const Products=  require('./products')
+const Brands = require("./brands");
+const Cart = require("./cart");
+const Users = require("./user");
+const Products = require("./products");
+const ShoppingCart = require("./shoppingcartitems");
+const { HasMany } = require("sequelize");
 
-Users.hasOne(Cart,{
-    foreignKey:"users_id",
-    onDelete:"CASCADE"
-})
+Users.hasOne(Cart, {
+  foreignKey: "users_id",
+  onDelete: "CASCADE",
+});
 
-Cart.belongsTo(Users,{
-    foreignKey:"users_id"
-})
+Cart.belongsTo(Users, {
+  foreignKey: "users_id",
+});
 
-Cart.hasMany(Products,{
-    foreignKey:"cart_id",
-    onDelete:"CASCADE"
-})
+Cart.hasMany(Products, {
+  foreignKey: "cart_id",
+  onDelete: "CASCADE",
+});
 
-Products.belongsTo(Cart,{
-    foreignKey:"cart_id"
-})
+Products.belongsTo(Cart, {
+  foreignKey: "cart_id",
+});
 
-// Products.hasOne(Cart,{
-//     foreignKey:"products_id",
-//     onDelete:"CASCADE"
-// })
+Products.hasMany(ShoppingCart, {
+  foreignKey: "products_id",
+  onDelete: "CASCADE",
+});
 
-// Cart.belongsTo(Products,{
-//     foreignKey:"products_id"
-// })
+ShoppingCart.belongsTo(Products, {
+  foreignKey: "products_id",
+});
 
-Brands.hasMany(Products,{
-    foreignKey:"brands_id",
-    onDelete:"CASCADE"
-})
+Cart.hasMany(ShoppingCart, {
+  foreignKey: "cart_id",
+  onDelete: "CASCADE",
+});
 
-Products.belongsTo(Brands,{
-    foreignKey:"brands_id"
-})
+ShoppingCart.belongsTo(Cart, {
+  foreignKey: "cart_id",
+});
 
-module.exports={
-    Brands,
-    Products,
-    Cart,
-    Users
-}
+Brands.hasMany(Products, {
+  foreignKey: "brands_id",
+  onDelete: "CASCADE",
+});
+
+Products.belongsTo(Brands, {
+  foreignKey: "brands_id",
+});
+
+module.exports = {
+  Brands,
+  Products,
+  Cart,
+  Users,
+  ShoppingCart
+};

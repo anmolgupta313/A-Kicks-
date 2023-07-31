@@ -19,24 +19,45 @@ export default function SingleProduct(props) {
 
     // console.log(cartId,"cartttt")
 
-    const updateProduct = fetch(
-      `http://localhost:3001/api/products/${buttonValue}`,
-      {
-        method: "PUT",
-        body: JSON.stringify({
-          cart_id: cartId,
-          quantity: selectValue,
-        }),
-        headers: { "Content-type": "application/json" },
-      }
-    );
+  //   const updateProduct = fetch(
+  //     `http://localhost:3001/api/products/${buttonValue}`,
+  //     {
+  //       method: "PUT",
+  //       body: JSON.stringify({
+  //         cart_id: cartId,
+  //         quantity: selectValue,
+  //       }),
+  //       headers: { "Content-type": "application/json" },
+  //     }
+  //   );
 
-    if (updateProduct) {
-      console.log("perfect");
-    } else {
-      console.log("not working");
+  //   if (updateProduct) {
+  //     console.log("perfect");
+  //   } else {
+  //     console.log("not working");
+  //   }
+  // }
+
+
+  const postShoppingCart = fetch(
+    `http://localhost:3001/api/shoppingcartitem/`,
+    {
+      method: "POST",
+      body: JSON.stringify({
+        cart_id: cartId,
+        products_id:buttonValue,
+        quantity: selectValue,
+      }),
+      headers: { "Content-type": "application/json" },
     }
+  );
+
+  if (postShoppingCart) {
+    console.log("perfect");
+  } else {
+    console.log("not working");
   }
+}
 
   function onChange(e) {
     const quantityvalue = e.target.value;
