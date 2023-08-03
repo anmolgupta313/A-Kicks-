@@ -24,10 +24,12 @@ export default function Products() {
   }, []);
   console.log(products, "Prod");
   return (
-    <div className="main-products-div">
+    <div className="main">
+      <div className="main-products-div">
       {products.map((prod) => {
         return <SingleProduct products={prod} />;
       })}
+    </div>
     </div>
   );
 }

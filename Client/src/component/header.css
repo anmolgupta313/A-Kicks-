@@ -1,8 +1,19 @@
+.nav-main-div {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px 30px;
+}
+
+.logo-div img {
+    width: 9%;
+}
+
 .nav-main-div ul {
     display: flex;
     list-style-type: none;
     justify-content: space-evenly;
     align-items: center;
+    column-gap: 65px;
 }
 
 .nav-main-div ul li a{

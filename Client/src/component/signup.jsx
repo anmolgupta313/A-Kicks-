@@ -1,11 +1,12 @@
 import React, { useState } from "react";
 import { useEffect } from "react";
 import"./signup.css"
+import { useNavigate } from "react-router-dom";
 // import { createUserWithEmailAndPassword } from "firebase/auth";
 // import { auth } from "./firebase";
 
 export default function Signup(){
-
+  const navigate= useNavigate();
     const [userData, setUserData] =useState([])
     const [userId, setUserId]= useState(0)
     const [formData, setformData] = useState({"email":"", "password": ""})
@@ -24,7 +25,7 @@ return setformData((prev)=>{
 
 
         e.preventDefault();
-
+        navigate('/login')
         // const user= {
         //   userName:"AnmolGA",
         //   password:"Lomna@321"

@@ -1,0 +1,9 @@
+
+.single-product-main-div {
+    display: flex;
+}
+
+single-product-img-div {
+    flex: 1 1;
+    display: flex;
+}

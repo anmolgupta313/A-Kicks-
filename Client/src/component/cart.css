@@ -2,18 +2,27 @@
 .cart-main-div {
     display: flex;
     flex-direction: column;
+    padding: 10px 79px;
+    align-items: end;
 }
 .single-cart-main-div {
     display: flex;
     align-items: center;
     justify-content: space-evenly;
     flex: 1 1 auto;
-    padding: 10px 0px;
+    border: solid;
+    border-radius: 7px;
+    padding: 10px;
+    border-color: #6BB9E6;
+    margin-top: 20px;
 }
 .single-cart-sub-div {
     width: 100%;
 }
-
+.single-cart-sub-div img {
+    width: 50%;
+    height: auto;
+}
 .title-product-name {
     font-size: 17px;
     font-weight: 600;
@@ -24,9 +33,46 @@
     font-size: 14px;
     color: #4a4a4a;
 }
+p.price {
+    margin: 0px;
+    font-size: 17px;
+    font-weight: 600;
+}
 
+p.dollar {
+    font-size: 16px;
+    font-weight: 400;
+    margin-top: 7px;
+}
 .x {
-    border: solid;
-    padding: 10px;
-    border-radius: 8px;
+    /* border: solid; */
+    /* padding: 10px; */
+    border-radius: 3px;
+    background-color: transparent;
+    border-color: #6bb9e6;
+}
+
+.subtotal {
+    background-color: black;
+    width: 29%;
+    margin-top: 21px;
+    padding: 12px;
+    border-radius: 5px;
+    padding-bottom: 27px;
+}
+
+.subtotal p {
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.checkout-div  button{   padding: 14px;
+background-color: #6bb9e6 ;
+font-weight: 600;
+font-size: 15px;
+border: none;
+color: white;
+border-radius: 7px;
+width: 100%;
 }

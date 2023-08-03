@@ -7,6 +7,7 @@ export default function SingleCart(props) {
     // console.log(cartId,"cartttt")
 
     function click(e){
+      window.location.reload(false)
 const buttonValue= e.target.value
 const updateProduct=   fetch(`http://localhost:3001/api/shoppingcartitem/${buttonValue}`,{
           method:"PUT",
@@ -32,7 +33,7 @@ const updateProduct=   fetch(`http://localhost:3001/api/shoppingcartitem/${butto
 
   function clickDel(e){
     // const cartRemove=0
-
+    window.location.reload(false)
     const buttonValue= e.target.value
     const delProduct=   fetch(`http://localhost:3001/api/shoppingcartitem/${buttonValue}`,{
               method:"DELETE",
@@ -50,11 +51,11 @@ const updateProduct=   fetch(`http://localhost:3001/api/shoppingcartitem/${butto
   return (
     <div className="single-cart-main-div">
       <div className="single-cart-sub-div">
-        <img src={props.cart.image}></img>
+        <img src={props.cart.product.image}></img>
       </div>
       <div className="single-cart-sub-div">
-        <div className="title-product-name">{props.cart.productName}</div>
-        <div className="size">Size {props.cart.size}</div>
+        <div className="title-product-name">{props.cart.product.productName}</div>
+        <div className="size">Size {props.cart.product.size}</div>
       </div>
         <div className="single-cart-sub-div">
           <select className="select" onChange={onChange}>
@@ -72,7 +73,9 @@ const updateProduct=   fetch(`http://localhost:3001/api/shoppingcartitem/${butto
             <option value="10">10</option>
           </select>
         </div>
-     <div className="single-cart-sub-div">
+        <div  className="single-cart-sub-div"><p className="price">Price</p>
+        <p className="dollar">$ {props.cart.product.price*props.cart.quantity}</p></div>
+      <div className="single-cart-sub-div">
         <button
             // disabled={!selectValue}
             onClick={click}
@@ -80,8 +83,10 @@ const updateProduct=   fetch(`http://localhost:3001/api/shoppingcartitem/${butto
             value={props.cart.id}
           >
             Update Cart
-          </button></div>
+          </button></div> 
           <div ><button  onClick={clickDel} className="x" value={props.cart.id}>x</button></div>
+
+      
     </div>
   );
 

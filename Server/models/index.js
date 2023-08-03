@@ -14,14 +14,14 @@ Cart.belongsTo(Users, {
   foreignKey: "users_id",
 });
 
-Cart.hasMany(Products, {
-  foreignKey: "cart_id",
-  onDelete: "CASCADE",
-});
+// Cart.hasMany(Products, {
+//   foreignKey: "cart_id",
+//   onDelete: "CASCADE",
+// });
 
-Products.belongsTo(Cart, {
-  foreignKey: "cart_id",
-});
+// Products.belongsTo(Cart, {
+//   foreignKey: "cart_id",
+// });
 
 Products.hasMany(ShoppingCart, {
   foreignKey: "products_id",

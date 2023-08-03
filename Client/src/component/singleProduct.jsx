@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { useState } from "react";
 export default function SingleProduct(props) {
   const [selectValue, setSelectValue] = useState(0);
@@ -67,12 +68,14 @@ export default function SingleProduct(props) {
 
   return (
     <div className="main-single-product-div">
+      
       <div className="product-img-div">
         <img src={props.products.image}></img>
       </div>
       <div className="product-name-div">
         <p>{props.products.productName}</p>
       </div>
+      <div><p className="single-p-size">size: {props.products.size}</p></div>
       <div className="product-price-div">
         <p>${props.products.price}</p>
       </div>
@@ -103,6 +106,7 @@ export default function SingleProduct(props) {
             Add To Cart
           </button>
         </div>
+        {/* <Link to={`/single/${props.products.id}`}>vfdgvf</Link> */}
       </div>
     </div>
   );

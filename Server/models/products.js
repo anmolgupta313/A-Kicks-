@@ -27,22 +27,22 @@ Products.init(
         isDecimal: true,
       },
     },
-    quantity: {
-      type: DataTypes.INTEGER,
-      allowNull: true,
-    },
+    // quantity: {
+    //   type: DataTypes.INTEGER,
+    //   allowNull: true,
+    // },
     size: {
       type: DataTypes.STRING,
       allowNull: false,
     },
-    cart_id: {
-      type: DataTypes.INTEGER,
-      allowNull: true,
-      references: {
-        model: "cart",
-        key: "id",
-      },
-    },
+    // // cart_id: {
+    // //   type: DataTypes.INTEGER,
+    // //   allowNull: true,
+    // //   references: {
+    // //     model: "cart",
+    // //     key: "id",
+    // //   },
+    // },
     brands_id: {
       type: DataTypes.INTEGER,
       allowNull: true,
