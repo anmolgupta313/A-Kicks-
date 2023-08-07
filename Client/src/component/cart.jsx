@@ -26,6 +26,13 @@ export default function Cart() {
 
   console.log(cart, "cart");
 
+// Calculating Subtotal 
+  const subTotal = cart.reduce((accumulator,current)=>{
+
+   return  accumulator + current.product.price*current.quantity
+
+  },0)
+
   return (
     <div className="cart-main-div">
       <div>
@@ -35,12 +42,12 @@ export default function Cart() {
       </div>
       <div className="subtotal">
         <div>
-          <p>Subtotal:</p>
+          <p>Subtotal: $ {subTotal}</p>
         </div>
         <div>
-          <p>Gst 13%</p>
+          <p>Gst 13%: $ {subTotal*13/100}</p>
         </div>
-        <div><p>Total</p></div>
+        <div><p>Total: {subTotal + subTotal*13/100} </p></div>
         <div className="checkout-div"><button>Proceed To Checkout</button></div>
       </div>
     </div>

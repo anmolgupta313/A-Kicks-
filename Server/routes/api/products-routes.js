@@ -25,6 +25,7 @@ if(!getProductById){
         res.status(500).json(err)
     }
 })
+
 // router.post('/addtocart', async(req,res)=>{
 //     try{
 // const addToCart= await Products.create({
