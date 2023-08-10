@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import SingleCart from "./singlecart";
 export default function Cart() {
   const [cart, setCart] = useState([]);
@@ -34,7 +35,9 @@ export default function Cart() {
   },0)
 
   return (
+    
     <div className="cart-main-div">
+      
       <div>
         {cart.map((api) => {
           return <SingleCart cart={api} />;
@@ -48,7 +51,7 @@ export default function Cart() {
           <p>Gst 13%: $ {subTotal*13/100}</p>
         </div>
         <div><p>Total: {subTotal + subTotal*13/100} </p></div>
-        <div className="checkout-div"><button>Proceed To Checkout</button></div>
+        <div className="checkout-div"><button><Link to={'/checkout'}>Proceed To Checkout</Link></button></div>
       </div>
     </div>
   );

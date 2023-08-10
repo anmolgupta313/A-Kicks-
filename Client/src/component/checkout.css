@@ -1,0 +1,78 @@
+
+.main-div-checkout {
+    /* display: flex; */
+    /* flex-direction: column; */
+    padding-left: 65px;
+}
+
+.main-div-form {
+    width: 40%;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    row-gap: 19px;
+    border: solid 1px;
+    padding: 20px;
+    border-radius: 6px;
+    border-color: transparent;
+    box-shadow: 0px 6px 20px 4px #0000002e;
+}
+
+.main-div-name {
+    display: flex;
+    column-gap: 20px;
+    align-items: center;
+    flex-wrap: wrap;
+    row-gap: 20px;
+}
+
+.main-div-details-address {
+    display: flex;
+    column-gap: 20px;
+    align-items: center;
+    flex-wrap: wrap;
+    row-gap: 20px;
+}
+
+.name-div {
+    flex: 1;
+}
+
+.name-div select{
+    padding: 7px;
+}
+label {
+    display: flex;
+    flex-direction: column;
+    row-gap: 6px;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.name-div input {
+    padding: 10px;
+    border: solid 1px;
+    border-radius: 3px;
+    font-size: 16px;
+    background-color:#E7F0FE  ;
+    border: none;
+}
+
+select.select {
+    background-color: #E7F0FE ;
+    border: none;
+    border-radius: 3px;
+}
+
+.div-btn button {
+    width: 100%;
+    padding: 12px;
+    font-size: 15px;
+    font-weight: 600;
+    border-radius: 5px;
+    border: none;
+    background-color: #6bb9e6;
+    color: white;
+}

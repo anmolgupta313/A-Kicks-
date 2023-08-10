@@ -11,6 +11,7 @@ import Signup from "./component/signup";
 import Login from "./component/login"
 import Cart from "./component/cart";
 import Single from "./component/newsingle";
+import Checkout from "./component/checkout";
 import "./component/products.css"
 // import react
 // import { use } from '../../Server/routes';
@@ -28,6 +29,7 @@ return(
   <Route path="/cart" Component={Cart} />
   <Route path="/logIn" Component={Login} />
   <Route path="/single/:productId" Component={Single} />
+  <Route path="/checkout" Component={Checkout} />
   </Routes>
 </div>
 </BrowserRouter>)

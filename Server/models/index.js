@@ -3,6 +3,7 @@ const Cart = require("./cart");
 const Users = require("./user");
 const Products = require("./products");
 const ShoppingCart = require("./shoppingcartitems");
+const shippingAddress= require('./address')
 const { HasMany } = require("sequelize");
 
 Users.hasOne(Cart, {
@@ -22,6 +23,15 @@ Cart.belongsTo(Users, {
 // Products.belongsTo(Cart, {
 //   foreignKey: "cart_id",
 // });
+
+Users.hasMany(shippingAddress,{
+  foreignKey:"users_id",
+  onDelete:"CASCADE"
+})
+
+shippingAddress.belongsTo(Users,{
+  foreignKey:"users_id"
+})
 
 Products.hasMany(ShoppingCart, {
   foreignKey: "products_id",
@@ -55,5 +65,6 @@ module.exports = {
   Products,
   Cart,
   Users,
-  ShoppingCart
+  ShoppingCart,
+  shippingAddress
 };
