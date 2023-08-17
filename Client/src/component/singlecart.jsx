@@ -55,7 +55,7 @@ const updateProduct=   fetch(`http://localhost:3001/api/shoppingcartitem/${butto
       </div>
       <div className="single-cart-sub-div">
         <div className="title-product-name">{props.cart.product.productName}</div>
-        <div className="size">Size {props.cart.product.size}</div>
+        <div className="size">Size {props.cart.size}</div>
       </div>
         <div className="single-cart-sub-div">
           <select className="select" onChange={onChange}>

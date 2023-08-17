@@ -7,38 +7,11 @@ export default function SingleProduct(props) {
   console.log(props.products.productName, "ProductName");
 
   function click(e) {
-    // const userId= localStorage.getItem("userId")
-    // const cartId=localStorage.getItem("cartId")
-    // const prodyctId=props.products.id
+ 
     const buttonValue = e.target.value;
-    //     if(prodyctId==buttonValue){
-    // console.log("wgf")
-    //     }else{
-    //       console.log(prodyctId)
-    //     }
     const cartId = localStorage.getItem("cartId");
 
-    // console.log(cartId,"cartttt")
-
-  //   const updateProduct = fetch(
-  //     `http://localhost:3001/api/products/${buttonValue}`,
-  //     {
-  //       method: "PUT",
-  //       body: JSON.stringify({
-  //         cart_id: cartId,
-  //         quantity: selectValue,
-  //       }),
-  //       headers: { "Content-type": "application/json" },
-  //     }
-  //   );
-
-  //   if (updateProduct) {
-  //     console.log("perfect");
-  //   } else {
-  //     console.log("not working");
-  //   }
-  // }
-
+   
 
   const postShoppingCart = fetch(
     `http://localhost:3001/api/shoppingcartitem/`,

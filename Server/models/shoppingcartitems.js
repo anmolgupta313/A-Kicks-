@@ -28,6 +28,10 @@ ShoppingCart.init(
         key: "id",
       },
     },
+    size: {
+      type: DataTypes.INTEGER,
+      allowNull: true,
+    },
     quantity: {
       type: DataTypes.INTEGER,
       allowNull: true,
