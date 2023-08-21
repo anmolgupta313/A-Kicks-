@@ -35,19 +35,20 @@ Products.init(
       type: DataTypes.STRING,
       allowNull: false,
     },
-    // // cart_id: {
-    // //   type: DataTypes.INTEGER,
-    // //   allowNull: true,
-    // //   references: {
-    // //     model: "cart",
-    // //     key: "id",
-    // //   },
-    // },
+ 
     brands_id: {
       type: DataTypes.INTEGER,
       allowNull: true,
       references: {
         model: "brands",
+        key: "id",
+      },
+    },
+    category_id: {
+      type: DataTypes.INTEGER,
+      allowNull: true,
+      references: {
+        model: "category",
         key: "id",
       },
     },

@@ -1,11 +1,11 @@
 const router= require('express').Router();
 
-const {Products, Cart, Brands}= require('../../models')
+const {Products, Cart, Brands, Category}= require('../../models')
 // const {validateToken}= require('../../JWT/jwt')
 router.get('/', async(req,res)=>{
 
 try{
-    const getProduct= await Products.findAll({include:[{model:Brands}]})
+    const getProduct= await Products.findAll({include:[{model:Brands},{model:Category}]})
     res.status(400).json(getProduct);
 
 }catch(err){
@@ -16,7 +16,7 @@ try{
 
 router.get('/:id',async(req,res)=>{
     try{
-const getProductById= await Products.findByPk(req.params.id,{include:[{model:Brands}]})
+const getProductById= await Products.findByPk(req.params.id,{include:[{model:Brands},{model:Category}]})
 
 if(!getProductById){
     res.status(404).json({message:"Invalid Id"})
@@ -58,4 +58,16 @@ res.status(200).json(updateProductById)
     }
 })
 
+
+router.get('/category/:id', async (req,res)=>{
+try{
+
+    const findProductsByCategory= await Products.findAll({where:{category_id:req.params.id}, include:[{model:Category}]})
+
+    res.status(200).json(findProductsByCategory)
+
+}catch(err){
+    res.status(500).json(err)
+}
+})
 module.exports= router;

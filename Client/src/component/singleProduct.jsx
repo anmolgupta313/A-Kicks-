@@ -7,31 +7,28 @@ export default function SingleProduct(props) {
   console.log(props.products.productName, "ProductName");
 
   function click(e) {
- 
     const buttonValue = e.target.value;
     const cartId = localStorage.getItem("cartId");
 
-   
+    const postShoppingCart = fetch(
+      `http://localhost:3001/api/shoppingcartitem/`,
+      {
+        method: "POST",
+        body: JSON.stringify({
+          cart_id: cartId,
+          products_id: buttonValue,
+          quantity: selectValue,
+        }),
+        headers: { "Content-type": "application/json" },
+      }
+    );
 
-  const postShoppingCart = fetch(
-    `http://localhost:3001/api/shoppingcartitem/`,
-    {
-      method: "POST",
-      body: JSON.stringify({
-        cart_id: cartId,
-        products_id:buttonValue,
-        quantity: selectValue,
-      }),
-      headers: { "Content-type": "application/json" },
+    if (postShoppingCart) {
+      console.log("perfect");
+    } else {
+      console.log("not working");
     }
-  );
-
-  if (postShoppingCart) {
-    console.log("perfect");
-  } else {
-    console.log("not working");
   }
-}
 
   function onChange(e) {
     const quantityvalue = e.target.value;
@@ -41,14 +38,15 @@ export default function SingleProduct(props) {
 
   return (
     <div className="main-single-product-div">
-      
       <div className="product-img-div">
         <img src={props.products.image}></img>
       </div>
       <div className="product-name-div">
         <p>{props.products.productName}</p>
       </div>
-      <div><p className="single-p-size">size: {props.products.size}</p></div>
+      <div>
+        <p className="single-p-size">size: {props.products.size}</p>
+      </div>
       <div className="product-price-div">
         <p>${props.products.price}</p>
       </div>

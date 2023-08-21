@@ -7,7 +7,7 @@ import Auth from "../utils/auth";
 export default function Header() {
 
   const [inputValue,SetInputValue]= useState("")
-// const [searchResultValue, setSearchResultValue]= useState([])
+const [searchResultValue, setSearchResultValue]= useState([])
   function inputChange(e){
     SetInputValue(e.target.value)
 
@@ -25,7 +25,6 @@ export default function Header() {
       //  console.log(res,"Daatta")
 
        const r=  await res.filter((resd)=>{
-        // setSearchResultValue(resd)
 return value && resd.productName.toLowerCase().includes(value)
 
        })

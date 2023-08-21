@@ -10,6 +10,7 @@ const productsData = [
     price: 500,
     size: "10.5",
     brands_id: 1,
+    category_id:1
     
   },
   {
@@ -18,6 +19,7 @@ const productsData = [
     price: 2200,
     size: "11",
     brands_id: 1,
+    category_id:3
    
   },
   {
@@ -26,6 +28,7 @@ const productsData = [
     price: 2500,
     size: "9",
     brands_id: 1,
+    category_id:3
   },
 ];
 

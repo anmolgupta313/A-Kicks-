@@ -2,8 +2,12 @@ import React from "react";
 import { useState } from "react";
 import { useEffect } from "react";
 import SingleProduct from "./singleProduct";
-import "./products.css"
+import "./products.css";
+
+import Sidebar from "./sidebar";
 export default function Products() {
+  const [value, setValue] = useState(null);
+  // const [array,setArray]= useState([])
   const [products, setProducts] = useState([]);
   useEffect(() => {
     async function fetchData() {
@@ -25,11 +29,13 @@ export default function Products() {
   console.log(products, "Prod");
   return (
     <div className="main">
+      <Sidebar products={products} value={value} setValue={setValue} setProducts={setProducts} />
+
       <div className="main-products-div">
-      {products.map((prod) => {
-        return <SingleProduct products={prod} />;
-      })}
-    </div>
+        {products.map((prod) => {
+          return <SingleProduct products={prod} />;
+        })}
+      </div>
     </div>
   );
 }
