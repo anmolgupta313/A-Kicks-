@@ -1,13 +1,17 @@
 import { Link } from "react-router-dom";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import akicks from"../logo/akicks.png"
 import "./header.css"
 import Auth from "../utils/auth";
 // import { use } from "../../../Server/routes/api/products-routes";
 export default function Header() {
-
   const [inputValue,SetInputValue]= useState("")
 const [searchResultValue, setSearchResultValue]= useState([])
+  useEffect(()=>{
+    fetchData(inputValue);
+  },[inputValue
+  ])
+
   function inputChange(e){
     SetInputValue(e.target.value)
 
@@ -29,15 +33,26 @@ return value && resd.productName.toLowerCase().includes(value)
 
        })
      
-// setSearchResultValue(r)
-console.log(r,"rrrr")
+setSearchResultValue(r)
+console.log(searchResultValue,"rrrr")
 
       // setProducts(res);
     } catch (err) {
       console.log(err, "err");
     }
   }
-  fetchData(inputValue);
+
+// till here
+
+// Mapping over search result value to display the search result
+const searchDisplay= searchResultValue.map((result)=>{
+return (  <div className="search-result-div">
+  {/* <Link to={`/single/${result.id}`}></Link> */}
+        <div className="search-result-img-div"><img src={result.image}></img></div>
+        <div className="search-result-p-div"><p>{result.productName}</p></div>
+       </div> )
+})
+
 // till here
   return (
     <div className="nav-main-div">
@@ -76,9 +91,8 @@ console.log(r,"rrrr")
       </ul>
       <div className="search-div"><input onChange={inputChange} type="text" value={inputValue}></input></div>
 
-      <div className="search-result-div"><div>
-        <div><img src=""></img></div>
-        <div><p>{}</p></div></div></div>
+<div className="search-result-main-div">{searchDisplay} </div>
+    
     </div>
   );
 }
