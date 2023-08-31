@@ -4,7 +4,8 @@ img {
 }
 .single-product-main-div {
   display: flex;
-  padding: 0px 50px 0px 50px;
+  padding: 0px 120px 60px 120px;
+  flex-wrap: wrap;
 }
 
 /* single-product-img-div {
@@ -13,7 +14,8 @@ img {
 } */
 
 .single-product-img-div {
-  flex: 1;
+  /* flex: 1 1; */
+  width: 50%;
 }
 
 .single-product-details-div {
@@ -42,8 +44,12 @@ img {
   border: 1.5px solid rgb(231, 231, 231);
   width: 100%;
   height: auto;
+  background-color: transparent;
 }
-
+.size-btn:hover {
+  background-color: transparent;
+  border-color: black;
+}
 .sizeee {
   display: flex;
   flex-direction: column;
@@ -59,7 +65,14 @@ img {
 .size-div-p p {
     margin: 8px;
 }
+.product-description-div {
+  margin-top: 30px;
+}
 
+.product-description-div p {
+  line-height: 1.8;
+  font-weight: 400;
+}
 .add-to-cart-div button{
   padding: 14px;
     background-color: black;
@@ -71,4 +84,43 @@ img {
 
 .add-to-cart-div {
   padding-top: 25px;
+}
+
+.related-sneakers-main-div {
+  background-color: #F9F9F9;
+}
+.related-sneakers-first-div {
+  padding: 20px 120px 80px 120px;
+}
+
+.related-sneakers-main-div h2 {
+  text-align: start;
+  font-size: 30px;
+  margin-left: 8px;
+}
+
+.related-sneakers-sub-div {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  row-gap: 59px;
+  column-gap: 30px;
+  padding-top: 13px;
+}
+.relared-sneakers-card-div {
+  width: 21%;
+  /* box-shadow: 0px 6px 20px 4px #0000002e; */
+  padding: 20px;
+  border-radius: 6px;
+  background-color: white;
+}
+
+.related-sneakers-img-div img {
+  width: 100%;
+}
+
+.related-sneakers-title p {
+  font-size: 17px;
+  line-height: 1.4;
+  font-weight: 500;
 }

@@ -1,7 +1,9 @@
 import { useState,useEffect } from "react";
 
 export default function Sidebar({products, value,setValue, setProducts}) {
-
+useEffect(()=>{
+categoryChange(value)
+},[value])
   function handlechangeValue(e) {
     setValue(e.target.value);
     }
@@ -10,17 +12,16 @@ export default function Sidebar({products, value,setValue, setProducts}) {
         const filterCategory=
         products.filter((category)=>{
 
-           return  category.category.categoryName.includes(value)
-        //     if(category.category.categoryName=== value){
-        //   setArray(category)
-        //     }
+           return   category.category.categoryName.includes(value)
             })
-  console.log(filterCategory, "catt")
+  // console.log(filterCategory, "catt")
+
+ return setProducts(filterCategory)
     }
 
   
 
-// console.log(array,"array")
+console.log(products,"array")
 
 
   console.log(value, "value");
@@ -37,7 +38,7 @@ export default function Sidebar({products, value,setValue, setProducts}) {
               name="category"
               type="radio"
               onChange={handlechangeValue}
-              onClick={categoryChange(value)}
+              
               value="All"
             />
           </label>

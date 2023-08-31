@@ -16,6 +16,11 @@ Products.init(
       type: DataTypes.STRING,
       allowNull: false,
     },
+    productDescription: {
+      type: DataTypes.STRING(800),
+      allowNull: false,
+    
+    },
     image: {
       type: DataTypes.STRING,
       allowNull: true,
@@ -35,7 +40,7 @@ Products.init(
       type: DataTypes.STRING,
       allowNull: false,
     },
- 
+
     brands_id: {
       type: DataTypes.INTEGER,
       allowNull: true,

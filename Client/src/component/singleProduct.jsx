@@ -39,7 +39,7 @@ export default function SingleProduct(props) {
   return (
     <div className="main-single-product-div">
       <div className="product-img-div">
-        <img src={props.products.image}></img>
+      <Link to={`/single/${props.products.id}`}> <img src={props.products.image}></img></Link>
       </div>
       <div className="product-name-div">
         <p>{props.products.productName}</p>
