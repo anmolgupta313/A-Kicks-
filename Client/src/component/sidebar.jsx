@@ -1,6 +1,6 @@
 import { useState,useEffect } from "react";
 
-export default function Sidebar({products, value,setValue, setProducts}) {
+export default function Sidebar({products, value,setValue, setProducts,newProducts}) {
 useEffect(()=>{
 categoryChange(value)
 },[value])
@@ -10,7 +10,7 @@ categoryChange(value)
 
     function categoryChange(value){
         const filterCategory=
-        products.filter((category)=>{
+        newProducts.filter((category)=>{
 
            return   category.category.categoryName.includes(value)
             })
@@ -22,7 +22,6 @@ categoryChange(value)
   
 
 console.log(products,"array")
-
 
   console.log(value, "value");
   return (
@@ -38,8 +37,8 @@ console.log(products,"array")
               name="category"
               type="radio"
               onChange={handlechangeValue}
-              
-              value="All"
+            
+              value="Sneakers"
             />
           </label>
           <label>

@@ -3,6 +3,9 @@
     justify-content: space-around;
     padding: 20px 30px;
     align-items: center;
+    background-color: transparent;
+    z-index: 1;
+    position: relative;
 }
 
 .logo-div img {
@@ -22,6 +25,7 @@
     text-decoration: none;
     font-size: 17px;
     font-weight: 600;
+    color: white;
 }
 
 .nav-main-div ul li a:hover{
@@ -33,9 +37,10 @@ color: #6BB9E6;
     margin-left: 40px;
     font-size: 14px;
     border-radius: 3px;
-    border-color: #6BB9E6;
+    border-color: rgb(133, 133, 133);
     border-width: 1.5px;
     border-style: solid;
+    background-color: transparent;
 }
 .search-result-main-div {
     display: flex;
@@ -47,6 +52,9 @@ color: #6BB9E6;
     border-radius: 4px;
     right: 40px;
     top: 75px;
+    overflow-y: scroll;
+    overflow-x: auto;
+    max-height: 190px;
 }
 .search-result-div {
     display: flex;

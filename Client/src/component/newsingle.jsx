@@ -32,10 +32,12 @@ export default function Single() {
     }
     fetchData();
 
+    console.log(ProductCategory,"category")
+
     fetchDataCategory(categoryId);
   }, [categoryId]);
 
-  console.log(categoryId, "idddd");
+
   async function fetchDataCategory(categoryId) {
     try {
       const getProductsbyCategory = await fetch(

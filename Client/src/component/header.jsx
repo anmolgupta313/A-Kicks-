@@ -89,7 +89,7 @@ return (  <div className="search-result-div">
         </li>):("")}
       
       </ul>
-      <div className="search-div"><input onChange={inputChange} type="text" value={inputValue}></input></div>
+      <div className="search-div"><input placeholder="Search Sneakers" onChange={inputChange} type="text" value={inputValue}></input></div>
 
 <div className="search-result-main-div">{searchDisplay} </div>
     
