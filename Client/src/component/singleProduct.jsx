@@ -36,6 +36,10 @@ export default function SingleProduct(props) {
     console.log(quantityvalue, "Quantityvalue");
   }
 
+  const a= JSON.parse(props.products.size)
+
+  console.log(a,"sds")
+
   return (
     <div className="main-single-product-div">
       <div className="product-img-div">
@@ -45,7 +49,7 @@ export default function SingleProduct(props) {
         <p>{props.products.productName}</p>
       </div>
       <div>
-        <p className="single-p-size">size: {props.products.size}</p>
+        <p className="single-p-size">size: {JSON.parse(props.products.size)}</p>
       </div>
       <div className="product-price-div">
         <p>${props.products.price}</p>

@@ -86,17 +86,32 @@ img {
   padding-top: 25px;
 }
 
+/* .related-sneakers-main-div {
+  background-color: #F9F9F9;
+} */
+
 .related-sneakers-main-div {
   background-color: #F9F9F9;
-}
-.related-sneakers-first-div {
-  padding: 20px 120px 80px 120px;
+  display: flex;
+  justify-content: center;
 }
 
-.related-sneakers-main-div h2 {
+.related-sneakers-first-div {
+  padding: 20px 120px 80px 120px;
+  width: 80%;
+}
+
+/* .related-sneakers-main-div h2 {
   text-align: start;
   font-size: 30px;
   margin-left: 8px;
+} */
+
+
+.related-sneakers-main-div h2 {
+  text-align: center;
+  font-size: 30px;
+  /* margin-left: 108px; */
 }
 
 .related-sneakers-sub-div {
@@ -108,7 +123,7 @@ img {
   padding-top: 13px;
 }
 .relared-sneakers-card-div {
-  width: 21%;
+  width: 16%;
   /* box-shadow: 0px 6px 20px 4px #0000002e; */
   padding: 20px;
   border-radius: 6px;
@@ -123,4 +138,6 @@ img {
   font-size: 17px;
   line-height: 1.4;
   font-weight: 500;
+  color: black;
+  text-decoration: none;
 }

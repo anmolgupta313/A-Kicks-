@@ -30,3 +30,57 @@
     text-decoration: underline;
     text-transform: capitalize;
 }
+
+.btn-main-page-releated {
+  text-align: center;
+}
+
+.btn-main-page-releated button {
+  background-color: black;
+  border-color: black;
+  color: white;
+  font-size: 14px;
+  font-weight: bold;
+  padding: 12px;
+  margin-top: 40px;
+}
+
+.related-sneakers-div{
+
+
+  padding: 20px 120px 50px 120px;
+width: 80%;
+}
+
+@media(max-width:760px){
+  .heading-div {
+    position: absolute;
+    top: 107px;
+    left: 26px;
+}
+.heading-div h1 {
+  font-size: 13px;
+}
+
+.heading-div p {
+  font-size: 11px;
+}
+
+.related-sneakers-div{
+  padding: 10px 0px 0px 0px;
+
+  width: 100%;
+}
+.related-sneakers-sub-div{
+  row-gap: 41px;
+}
+.relared-sneakers-card-div {
+  width: 64% !important;
+  padding: 28px;
+
+}
+
+.btn-main-page-releated {
+  padding-bottom: 40px;
+}
+}

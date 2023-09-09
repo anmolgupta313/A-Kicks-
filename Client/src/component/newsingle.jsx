@@ -32,11 +32,10 @@ export default function Single() {
     }
     fetchData();
 
-    console.log(ProductCategory,"category")
+    console.log(ProductCategory, "category");
 
     fetchDataCategory(categoryId);
   }, [categoryId]);
-
 
   async function fetchDataCategory(categoryId) {
     try {
@@ -58,22 +57,8 @@ export default function Single() {
 
   // console.log(result,"result")
 
-  const result = ProductCategory.slice(0, 5);
+  const result = ProductCategory.slice(0, 8);
   console.log(result, "category");
-
-  const relatedSneakersCard = result.map((snk) => {
-    return (
-      <div className="relared-sneakers-card-div">
-        <div className="related-sneakers-img-div">
-          <img src={snk.image} />
-        </div>
-        <div className="related-sneakers-title">
-          <p>{snk.productName}</p>
-        </div>
-      </div>
-    );
-  });
-
   const shuffle = (array) => {
     for (var i = array.length - 1; i > 0; i--) {
       var j = Math.floor(Math.random() * (i + 1));
@@ -84,6 +69,24 @@ export default function Single() {
   };
 
   shuffle(result);
+  const relatedSneakersCard = result.map((snk) => {
+    // console.log(snk.id, "snkid");
+    return (
+      <Link to={`/single/${snk.id}`} className="relared-sneakers-card-div">
+        {" "}
+        <div>
+          <div className="related-sneakers-img-div">
+            <img src={snk.image} />
+          </div>
+          <div className="related-sneakers-title">
+            <p>{snk.productName}</p>
+          </div>
+        </div>
+      </Link>
+    );
+  });
+
+
 
   function clickSize(e) {
     setButtonValue(e.target.value);
@@ -218,8 +221,9 @@ export default function Single() {
       </div>
       <div className="related-sneakers-main-div">
         <div className="related-sneakers-first-div">
-            <h2>Rdelated Sneakers</h2>
-            <div className="related-sneakers-sub-div">{relatedSneakersCard}</div></div>
+          <h2>Rdelated Sneakers</h2>
+          <div className="related-sneakers-sub-div">{relatedSneakersCard}</div>
+        </div>
       </div>
     </div>
   );

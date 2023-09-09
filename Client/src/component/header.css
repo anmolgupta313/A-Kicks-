@@ -12,6 +12,11 @@
     width: 9%;
 }
 
+.main-nav-bar-links-div {
+    display: flex;
+    align-items: center;
+}
+
 .nav-main-div ul {
     display: flex;
     list-style-type: none;
@@ -25,7 +30,7 @@
     text-decoration: none;
     font-size: 17px;
     font-weight: 600;
-    color: white;
+    color: #929292;
 }
 
 .nav-main-div ul li a:hover{
@@ -50,7 +55,7 @@ color: #6BB9E6;
     max-width: 15%;
     box-shadow: 0px 6px 20px 4px #0000002e;
     border-radius: 4px;
-    right: 40px;
+    right: 60px;
     top: 75px;
     overflow-y: scroll;
     overflow-x: auto;

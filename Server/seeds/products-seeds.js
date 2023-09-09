@@ -9,7 +9,7 @@ const productsData = [
     productDescription:
       "Paying homage to Michael Jordan's alma mater, this colorway of the Air Jordan 1 Retro Low OG features a simple and clean 'UNC' colorway. A full leather upper features a white base with black overlays on the forefoot and lace area, but a vivid Dark Powder Blue on the back heel area. A black Swoosh frames the profile, while a black Wings logo can be found on the back heel piece. A crisp white midsole gives way to a UNC rubber outsole, completing the look.",
     image: "https://cdn.flightclub.com/1250/TEMPLATE/358111/1.jpg",
-    price: 500,
+    price: 400,
     size: "10.5",
     brands_id: 1,
     category_id: 1,

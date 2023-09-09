@@ -57,6 +57,7 @@ return (  <div className="search-result-div">
   return (
     <div className="nav-main-div">
       <div className="logo-div"><img src={akicks}></img></div>
+      <div className="main-nav-bar-links-div">
       <ul>
         <li>
           <Link to="/">Home</Link>
@@ -92,6 +93,7 @@ return (  <div className="search-result-div">
       <div className="search-div"><input placeholder="Search Sneakers" onChange={inputChange} type="text" value={inputValue}></input></div>
 
 <div className="search-result-main-div">{searchDisplay} </div>
+</div>
     
     </div>
   );

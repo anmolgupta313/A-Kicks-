@@ -13,6 +13,7 @@ import Cart from "./component/cart";
 import Single from "./component/newsingle";
 import Checkout from "./component/checkout";
 import "./component/products.css"
+import Footer from "./component/footer";
 // import react
 // import { use } from '../../Server/routes';
 
@@ -32,7 +33,10 @@ return(
   <Route path="/checkout" Component={Checkout} />
   </Routes>
 </div>
+<Footer />
 </BrowserRouter>)
+
+
 }
 
 export default App;
