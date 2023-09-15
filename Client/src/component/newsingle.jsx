@@ -33,9 +33,9 @@ export default function Single() {
     fetchData();
 
     console.log(ProductCategory, "category");
-
-    fetchDataCategory(categoryId);
-  }, [categoryId]);
+// debugger
+    fetchDataCategory(singleProducts.category_id);
+  }, [productId,singleProducts.category_id]);
 
   async function fetchDataCategory(categoryId) {
     try {
@@ -55,10 +55,6 @@ export default function Single() {
     }
   }
 
-  // console.log(result,"result")
-
-  const result = ProductCategory.slice(0, 8);
-  console.log(result, "category");
   const shuffle = (array) => {
     for (var i = array.length - 1; i > 0; i--) {
       var j = Math.floor(Math.random() * (i + 1));
@@ -67,8 +63,13 @@ export default function Single() {
       array[j] = temp;
     }
   };
+  // console.log(result,"result")
+shuffle(ProductCategory)
+  const result = ProductCategory.slice(0, 8);
+  console.log(result, "category");
 
-  shuffle(result);
+
+  // shuffle(result);
   const relatedSneakersCard = result.map((snk) => {
     // console.log(snk.id, "snkid");
     return (
@@ -85,8 +86,6 @@ export default function Single() {
       </Link>
     );
   });
-
-
 
   function clickSize(e) {
     setButtonValue(e.target.value);

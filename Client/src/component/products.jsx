@@ -10,6 +10,7 @@ export default function Products() {
   // const [array,setArray]= useState([])
   const [products, setProducts] = useState([]);
   const[newProducts, setNewProducts]=useState([])
+  const[priceProducts, setPriceProducts]=useState([])
   useEffect(() => {
     async function fetchData() {
       try {
@@ -22,6 +23,7 @@ export default function Products() {
 
         setProducts(res);
         setNewProducts(res);
+        setPriceProducts(res);
       } catch (err) {
         console.log(err, "err");
       }
@@ -31,7 +33,7 @@ export default function Products() {
   console.log(products, "Prod");
   return (
     <div className="main">
-      <Sidebar products={products} value={value} setValue={setValue} setProducts={setProducts}  newProducts={newProducts}/>
+      <Sidebar products={products} value={value} setValue={setValue} setProducts={setProducts}  newProducts={newProducts} priceProducts={priceProducts}/>
 
       <div className="main-products-div">
         {products.map((prod) => {

@@ -13,4 +13,14 @@ res.status(200).json(findCategory)
     }
 })
 
+router.get('/parent/:id', async(req,res)=>{
+    try{
+const parentCategory= await Category.findAll({where:{parentCategory_id:req.params.id},include:[{model:Products}]})
+
+res.status(200).json(parentCategory)
+    }catch(err){
+        res.status(500).json(err)
+    }
+})
+
 module.exports= router

@@ -16,6 +16,27 @@ Category.init(
           type: DataTypes.STRING,
           allowNull: false,
         },
+        parentCategory_id:{
+
+          type:DataTypes.INTEGER,
+          allowNull:true,
+          references: {
+            model: "category",
+            key: "id",
+          },
+
+        },
+
+        firstSubCategory_id:{
+
+          type:DataTypes.INTEGER,
+          allowNull:true,
+          references: {
+            model: "category",
+            key: "id",
+          },
+
+        }
         // // cart_id: {
         // //   type: DataTypes.INTEGER,
         // //   allowNull: true,

@@ -1,6 +1,6 @@
 import { useState,useEffect } from "react";
 import "./sidebar.css";
-export default function Sidebar({products, value,setValue, setProducts,newProducts}) {
+export default function Sidebar({products, value,setValue, setProducts,newProducts, priceProducts}) {
 
   const[priceValue,setPriceValue]= useState(null)
 useEffect(()=>{
@@ -21,7 +21,7 @@ setPriceValue(e.target.value)
         const filterCategory=
         newProducts.filter((category)=>{
 
-           return   category.category.categoryName.includes(value)
+           return   category.category.categoryName.includes(value) 
             })
   // console.log(filterCategory, "catt")
 
@@ -30,7 +30,7 @@ setPriceValue(e.target.value)
 
 
 //     function priceFilter(priceValue){
-//       const priceFilterArray= products.filter((value)=>{
+//       const priceFilterArray= priceProducts.filter((value)=>{
 //         if(priceValue >= value.price ){
 // return value.price<=priceValue 
 //         }
@@ -61,31 +61,41 @@ setPriceValue(e.target.value)
               value="Sneakers"
             />
           </label>
+         
           <label>
-            Sneakers
+            Air Jordan 
             <input
-              name="category"
               type="radio"
+              name="category"
               onChange={handlechangeValue}
-              value="Sneakers"
+              value="Jordan"
             />
           </label>
           <label>
-            Jordan High
+            Yeezy
             <input
               type="radio"
               name="category"
               onChange={handlechangeValue}
-              value="Jordan High"
+              value="Yeezy"
             />
           </label>
           <label>
-            Travis Scott
+            Adidas
             <input
-              type="radio"
               name="category"
+              type="radio"
               onChange={handlechangeValue}
-              value="Travis Scott"
+              value="Adidas"
+            />
+          </label>
+          <label>
+            New Balance
+            <input
+              name="category"
+              type="radio"
+              onChange={handlechangeValue}
+              value="New Balance"
             />
           </label>
         </div>
@@ -130,7 +140,7 @@ setPriceValue(e.target.value)
               type="radio"
               name="category"
               onChange={handlePriceValue}
-              value="2000"
+              value="2500"
             />
           </label>
         </div>

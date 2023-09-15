@@ -57,6 +57,20 @@ Brands.hasMany(Products, {
   onDelete: "CASCADE",
 });
 
+Category.hasOne(Category,{
+  foreignKey:"parentCategory_id",
+  onDelete:"CASCADE"
+})
+
+Category.hasOne(Category,{
+  foreignKey:"firstSubCategory_id",
+  onDelete:"CASCADE"
+})
+
+Category.belongsTo(Category,{
+  foreignKey:"parentCategory_id"
+})
+
 Products.belongsTo(Brands, {
   foreignKey: "brands_id",
 });

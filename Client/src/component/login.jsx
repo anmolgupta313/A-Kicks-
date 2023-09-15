@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import Auth from "../utils/auth"
 import "./signup.css"
 import { useEffect } from "react";
@@ -8,7 +8,7 @@ import { useNavigate } from "react-router-dom";
 // import { createUserWithEmailAndPassword } from "firebase/auth";
 // import { auth } from "./firebase";
 
-export default function Login(){
+export default function Login({token, setToken}){
   const navigate= useNavigate();
     const [userData, setUserData] =useState([])
   
@@ -44,12 +44,17 @@ return setformData((prev)=>{
 
       setUserData(reslogin)
 
-      console.log(userData,"LoginData")
+      // console.log(userData,"LoginData")
         // calling auth login function which is setting token in localstorage
        Auth.login(reslogin.token)
 // setting cart id into local storage
        localStorage.setItem("cartId",reslogin.cartId)
 
+       
+//Getting token from the local storage and then setting it into a state variable 
+       const getToken= localStorage.getItem('id_token')
+
+       setToken(getToken)
       navigate('/products')
         if(postUser.ok){
           console.log("perfect");

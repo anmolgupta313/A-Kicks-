@@ -45,17 +45,18 @@ export default function SingleProduct(props) {
       <div className="product-img-div">
       <Link to={`/single/${props.products.id}`}> <img src={props.products.image}></img></Link>
       </div>
+       <div>
+        <p className="single-p-size">{props.products.category.categoryName}</p>
+      </div>
       <div className="product-name-div">
         <p>{props.products.productName}</p>
       </div>
-      <div>
-        <p className="single-p-size">size: {JSON.parse(props.products.size)}</p>
-      </div>
+     
       <div className="product-price-div">
         <p>${props.products.price}</p>
       </div>
       <div className="select-cart-div-main">
-        <div>
+        {/* <div>
           <select className="select" onChange={onChange}>
             {" "}
             <option value="0">0</option>
@@ -70,8 +71,8 @@ export default function SingleProduct(props) {
             <option value="9">9</option>
             <option value="10">10</option>
           </select>
-        </div>
-        <div className="btn-div">
+        </div> */}
+        {/* <div className="btn-div">
           <button
             disabled={!selectValue}
             onClick={click}
@@ -80,8 +81,8 @@ export default function SingleProduct(props) {
           >
             Add To Cart
           </button>
-        </div>
-        {/* <Link to={`/single/${props.products.id}`}>vfdgvf</Link> */}
+        </div> */}
+        <Link to={`/single/${props.products.id}`}></Link>
       </div>
     </div>
   );
