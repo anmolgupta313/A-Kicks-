@@ -46,6 +46,20 @@ img {
   height: auto;
   background-color: transparent;
 }
+
+.size-btn-active {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: rgb(0, 0, 0);
+  font-weight: 500;
+  font-size: 14px;
+  text-transform: uppercase;
+  cursor: pointer;
+  line-height: 42px;
+  border: 1.5px solid rgb(0, 0, 0);
+  width: 100%;
+  height: auto;
+  background-color: transparent;
+}
 .size-btn:hover {
   background-color: transparent;
   border-color: black;

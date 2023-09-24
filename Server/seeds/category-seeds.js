@@ -27,12 +27,15 @@ firstSubCategory_id:"2" },
 },
 {
   categoryName: "Yeezy",
+  parentCategory_id:"1"
 },
 {
   categoryName: "Adidas",
+  parentCategory_id:"1"
 },
 {
   categoryName: "New Balance",
+  parentCategory_id:"1"
 },
 {
   categoryName: "Sneakers",

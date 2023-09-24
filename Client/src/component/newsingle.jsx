@@ -90,6 +90,7 @@ shuffle(ProductCategory)
   function clickSize(e) {
     setButtonValue(e.target.value);
     setSelectValue(1);
+    
   }
 
   function click(e) {
@@ -137,70 +138,70 @@ shuffle(ProductCategory)
               </div>
               <div className="sizeee">
                 <div className="row 1">
-                  <button className="size-btn" value="3.5" onClick={clickSize}>
+                  <button className={ buttonValue==="3.5"  ? "size-btn-active":"size-btn"} value="3.5"   onClick={clickSize}>
                     3.5
                   </button>
-                  <button className="size-btn" value="4" onClick={clickSize}>
+                  <button className={ buttonValue==="4"  ? "size-btn-active":"size-btn"} value="4" onClick={clickSize}>
                     4
                   </button>
-                  <button className="size-btn" value="4.5" onClick={clickSize}>
+                  <button className={buttonValue==="4.5"  ? "size-btn-active":"size-btn"} value="4.5"  onClick={clickSize}>
                     4.5
                   </button>
-                  <button className="size-btn" value="5" onClick={clickSize}>
+                  <button className={buttonValue==="5"   ? "size-btn-active":"size-btn"} value="5"onClick={clickSize}>
                     5
                   </button>
-                  <button className="size-btn" value="5.5" onClick={clickSize}>
+                  <button className={buttonValue==="5.5" ? "size-btn-active":"size-btn"} value="5.5"  onClick={clickSize}>
                     5.5
                   </button>
                 </div>
                 <div className="row 1">
-                  <button className="size-btn" value="6" onClick={clickSize}>
+                  <button className={buttonValue==="6" ? "size-btn-active":"size-btn"} value="6"  onClick={clickSize}>
                     6
                   </button>
-                  <button className="size-btn" value="6.5" onClick={clickSize}>
+                  <button className={buttonValue==="6.5"  ? "size-btn-active":"size-btn"} value="6.5"  onClick={clickSize}>
                     6.5
                   </button>
-                  <button className="size-btn" value="7" onClick={clickSize}>
+                  <button className={buttonValue==="7"  ? "size-btn-active":"size-btn"} value="7"  onClick={clickSize}>
                     7
                   </button>
-                  <button className="size-btn" value="7.5" onClick={clickSize}>
+                  <button className={buttonValue==="7.5" ? "size-btn-active":"size-btn"} value="7.5"  onClick={clickSize}>
                     7.5
                   </button>
-                  <button className="size-btn" value="8" onClick={clickSize}>
+                  <button className={buttonValue==="8" ? "size-btn-active":"size-btn"} value="8"  onClick={clickSize}>
                     8
                   </button>
                 </div>
                 <div className="row 1">
-                  <button className="size-btn" value="8.5" onClick={clickSize}>
+                  <button className={buttonValue==="8.5"  ? "size-btn-active":"size-btn"} value="8.5"  onClick={clickSize}>
                     8.5
                   </button>
-                  <button className="size-btn" value="9" onClick={clickSize}>
+                  <button className={buttonValue==="9" ? "size-btn-active":"size-btn"} value="9"  onClick={clickSize}>
                     9
                   </button>
-                  <button className="size-btn" value="9.5" onClick={clickSize}>
+                  <button className={buttonValue==="9.5"  ? "size-btn-active":"size-btn"} value="9.5"  onClick={clickSize}>
                     9.5
                   </button>
-                  <button className="size-btn" value="10" onClick={clickSize}>
+                  <button className={buttonValue==="10" ? "size-btn-active":"size-btn"} value="10"  onClick={clickSize}>
                     10
                   </button>
-                  <button className="size-btn" value="10.5" onClick={clickSize}>
+                  <button className={buttonValue==="10.5"  ? "size-btn-active":"size-btn"} value="10.5"  onClick={clickSize}>
                     10.5
                   </button>
                 </div>
                 <div className="row 1">
-                  <button className="size-btn" value="11" onClick={clickSize}>
+                  <button className={buttonValue==="11" ? "size-btn-active":"size-btn"} value="11"  onClick={clickSize}>
                     11
                   </button>
-                  <button className="size-btn" value="11.5" onClick={clickSize}>
+                  <button className={buttonValue==="11.5"  ? "size-btn-active":"size-btn"} value="11.5"  onClick={clickSize}>
                     11.5
                   </button>
-                  <button className="size-btn" value="12" onClick={clickSize}>
+                  <button className={buttonValue==="12" ? "size-btn-active":"size-btn"} value="12"  onClick={clickSize}>
                     12
                   </button>
-                  <button className="size-btn" value="12.5" onClick={clickSize}>
+                  <button className={buttonValue==="12.5"  ? "size-btn-active":"size-btn"} value="12.5"  onClick={clickSize}>
                     12.5
                   </button>
-                  <button className="size-btn" value="13" onClick={clickSize}>
+                  <button className={buttonValue==="13"  ? "size-btn-active":"size-btn"} value="13"  onClick={clickSize}>
                     13
                   </button>
                 </div>

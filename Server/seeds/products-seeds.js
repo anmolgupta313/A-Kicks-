@@ -333,6 +333,248 @@ const productsData = [
     brands_id: 1,
     category_id: 8,
   },
+  {
+    productName: "YEEZY BOOST 350 V2 'STATIC NON-REFLECTIVE' 2023 ",
+    productDescription:
+      "Paying homage to Michael Jordan's alma mater, this colorway of the Air Jordan 1 Retro Low OG features a simple and clean 'UNC' colorway. A full leather upper features a white base with black overlays on the forefoot and lace area, but a vivid Dark Powder Blue on the back heel area. A black Swoosh frames the profile, while a black Wings logo can be found on the back heel piece. A crisp white midsole gives way to a UNC rubber outsole, completing the look.",
+    image: "https://cdn.flightclub.com/750/TEMPLATE/375976/1.jpg",
+    price: 290,
+    size: "10.5",
+    brands_id: 1,
+    category_id: 8,
+  },
+
+  {
+    productName: "SAMBA OG 'WHITE BLACK GUM' ",
+    productDescription:
+      "Paying homage to Michael Jordan's alma mater, this colorway of the Air Jordan 1 Retro Low OG features a simple and clean 'UNC' colorway. A full leather upper features a white base with black overlays on the forefoot and lace area, but a vivid Dark Powder Blue on the back heel area. A black Swoosh frames the profile, while a black Wings logo can be found on the back heel piece. A crisp white midsole gives way to a UNC rubber outsole, completing the look.",
+    image: "https://cdn.flightclub.com/750/TEMPLATE/238596/1.jpg",
+    price: 144,
+    size: "10.5",
+    brands_id: 1,
+    category_id: 9,
+  },
+
+  {
+    productName: "BAD BUNNY X CAMPUS 'CHALKY BROWN' ",
+    productDescription:
+      "Paying homage to Michael Jordan's alma mater, this colorway of the Air Jordan 1 Retro Low OG features a simple and clean 'UNC' colorway. A full leather upper features a white base with black overlays on the forefoot and lace area, but a vivid Dark Powder Blue on the back heel area. A black Swoosh frames the profile, while a black Wings logo can be found on the back heel piece. A crisp white midsole gives way to a UNC rubber outsole, completing the look.",
+    image: "https://cdn.flightclub.com/750/TEMPLATE/373669/1.jpg",
+    price: 158,
+    size: "10.5",
+    brands_id: 1,
+    category_id: 9,
+  },
+  {
+    productName: "CAMPUS 00S 'DARK GREEN GUM' ",
+    productDescription:
+      "Paying homage to Michael Jordan's alma mater, this colorway of the Air Jordan 1 Retro Low OG features a simple and clean 'UNC' colorway. A full leather upper features a white base with black overlays on the forefoot and lace area, but a vivid Dark Powder Blue on the back heel area. A black Swoosh frames the profile, while a black Wings logo can be found on the back heel piece. A crisp white midsole gives way to a UNC rubber outsole, completing the look.",
+    image: "https://cdn.flightclub.com/750/TEMPLATE/361389/1.jpg",
+    price: 162,
+    size: "10.5",
+    brands_id: 1,
+    category_id: 9,
+  },
+  {
+    productName: "CRAZY IIINFINITY 'CHALK'",
+    productDescription:
+      "Paying homage to Michael Jordan's alma mater, this colorway of the Air Jordan 1 Retro Low OG features a simple and clean 'UNC' colorway. A full leather upper features a white base with black overlays on the forefoot and lace area, but a vivid Dark Powder Blue on the back heel area. A black Swoosh frames the profile, while a black Wings logo can be found on the back heel piece. A crisp white midsole gives way to a UNC rubber outsole, completing the look.",
+    image: "https://cdn.flightclub.com/750/TEMPLATE/374745/1.jpg",
+    price: 253,
+    size: "10.5",
+    brands_id: 1,
+    category_id: 9,
+  },
+  {
+    productName: "WMNS SAMBA OG 'ALUMINIUM GUM'",
+    productDescription:
+      "Paying homage to Michael Jordan's alma mater, this colorway of the Air Jordan 1 Retro Low OG features a simple and clean 'UNC' colorway. A full leather upper features a white base with black overlays on the forefoot and lace area, but a vivid Dark Powder Blue on the back heel area. A black Swoosh frames the profile, while a black Wings logo can be found on the back heel piece. A crisp white midsole gives way to a UNC rubber outsole, completing the look.",
+    image: "https://cdn.flightclub.com/750/TEMPLATE/375814/1.jpg",
+    price: 217,
+    size: "10.5",
+    brands_id: 1,
+    category_id: 9,
+  },
+  {
+    productName: "THE SIMPSONS X STAN SMITH 'HOMER SIMPSON'",
+    productDescription:
+      "Paying homage to Michael Jordan's alma mater, this colorway of the Air Jordan 1 Retro Low OG features a simple and clean 'UNC' colorway. A full leather upper features a white base with black overlays on the forefoot and lace area, but a vivid Dark Powder Blue on the back heel area. A black Swoosh frames the profile, while a black Wings logo can be found on the back heel piece. A crisp white midsole gives way to a UNC rubber outsole, completing the look.",
+    image: "https://cdn.flightclub.com/750/TEMPLATE/374623/1.jpg",
+    price: 128,
+    size: "10.5",
+    brands_id: 1,
+    category_id: 9,
+  },
+  {
+    productName: "CAMPUS 00S 'BLACK WHITE GUM'",
+    productDescription:
+      "Paying homage to Michael Jordan's alma mater, this colorway of the Air Jordan 1 Retro Low OG features a simple and clean 'UNC' colorway. A full leather upper features a white base with black overlays on the forefoot and lace area, but a vivid Dark Powder Blue on the back heel area. A black Swoosh frames the profile, while a black Wings logo can be found on the back heel piece. A crisp white midsole gives way to a UNC rubber outsole, completing the look.",
+    image: "https://cdn.flightclub.com/750/TEMPLATE/352867/1.jpg",
+    price: 124,
+    size: "10.5",
+    brands_id: 1,
+    category_id: 9,
+  },
+  {
+    productName: "BAD BUNNY X FORUM BUCKLE LOW 'LAST FORUM' ",
+    productDescription:
+      "Paying homage to Michael Jordan's alma mater, this colorway of the Air Jordan 1 Retro Low OG features a simple and clean 'UNC' colorway. A full leather upper features a white base with black overlays on the forefoot and lace area, but a vivid Dark Powder Blue on the back heel area. A black Swoosh frames the profile, while a black Wings logo can be found on the back heel piece. A crisp white midsole gives way to a UNC rubber outsole, completing the look.",
+    image: "https://cdn.flightclub.com/750/TEMPLATE/344509/1.jpg",
+    price: 281,
+    size: "10.5",
+    brands_id: 1,
+    category_id: 9,
+  },
+  {
+    productName: "BAPE X CAMPUS 80S '30TH ANNIVERSARY - BROWN'",
+    productDescription:
+      "Paying homage to Michael Jordan's alma mater, this colorway of the Air Jordan 1 Retro Low OG features a simple and clean 'UNC' colorway. A full leather upper features a white base with black overlays on the forefoot and lace area, but a vivid Dark Powder Blue on the back heel area. A black Swoosh frames the profile, while a black Wings logo can be found on the back heel piece. A crisp white midsole gives way to a UNC rubber outsole, completing the look.",
+    image: "https://cdn.flightclub.com/750/TEMPLATE/372425/1.jpg",
+    price: 259,
+    size: "10.5",
+    brands_id: 1,
+    category_id: 9,
+  },
+  {
+    productName: "WMNS SAMBA OG 'SILVER GREEN GUM'",
+    productDescription:
+      "Paying homage to Michael Jordan's alma mater, this colorway of the Air Jordan 1 Retro Low OG features a simple and clean 'UNC' colorway. A full leather upper features a white base with black overlays on the forefoot and lace area, but a vivid Dark Powder Blue on the back heel area. A black Swoosh frames the profile, while a black Wings logo can be found on the back heel piece. A crisp white midsole gives way to a UNC rubber outsole, completing the look.",
+    image: "https://cdn.flightclub.com/750/TEMPLATE/375817/1.jpg",
+    price: 192,
+    size: "10.5",
+    brands_id: 1,
+    category_id: 9,
+  },
+  {
+    productName: "BAD BUNNY X FORUM BUCKLE LOW 'BLUE TINT'",
+    productDescription:
+      "Paying homage to Michael Jordan's alma mater, this colorway of the Air Jordan 1 Retro Low OG features a simple and clean 'UNC' colorway. A full leather upper features a white base with black overlays on the forefoot and lace area, but a vivid Dark Powder Blue on the back heel area. A black Swoosh frames the profile, while a black Wings logo can be found on the back heel piece. A crisp white midsole gives way to a UNC rubber outsole, completing the look.",
+    image: "https://cdn.flightclub.com/750/TEMPLATE/314012/1.jpg",
+    price: 493,
+    size: "10.5",
+    brands_id: 1,
+    category_id: 9,
+  },
+  {
+    productName: "ULTRABOOST 1.0 'TRIPLE WHITE 2023'",
+    productDescription:
+      "Paying homage to Michael Jordan's alma mater, this colorway of the Air Jordan 1 Retro Low OG features a simple and clean 'UNC' colorway. A full leather upper features a white base with black overlays on the forefoot and lace area, but a vivid Dark Powder Blue on the back heel area. A black Swoosh frames the profile, while a black Wings logo can be found on the back heel piece. A crisp white midsole gives way to a UNC rubber outsole, completing the look.",
+    image: "https://cdn.flightclub.com/750/TEMPLATE/349247/1.jpg",
+    price: 165,
+    size: "10.5",
+    brands_id: 1,
+    category_id: 9,
+  },
+  {
+    productName: "2002R 'PROTECTION PACK - RAIN CLOUD'",
+    productDescription:
+      "Paying homage to Michael Jordan's alma mater, this colorway of the Air Jordan 1 Retro Low OG features a simple and clean 'UNC' colorway. A full leather upper features a white base with black overlays on the forefoot and lace area, but a vivid Dark Powder Blue on the back heel area. A black Swoosh frames the profile, while a black Wings logo can be found on the back heel piece. A crisp white midsole gives way to a UNC rubber outsole, completing the look.",
+    image: "https://cdn.flightclub.com/750/TEMPLATE/275138/1.jpg",
+    price: 269,
+    size: "10.5",
+    brands_id: 1,
+    category_id: 10,
+  },  {
+    productName: "2002R 'PROTECTION PACK - BLACK GREY'",
+    productDescription:
+      "Paying homage to Michael Jordan's alma mater, this colorway of the Air Jordan 1 Retro Low OG features a simple and clean 'UNC' colorway. A full leather upper features a white base with black overlays on the forefoot and lace area, but a vivid Dark Powder Blue on the back heel area. A black Swoosh frames the profile, while a black Wings logo can be found on the back heel piece. A crisp white midsole gives way to a UNC rubber outsole, completing the look.",
+    image: "https://cdn.flightclub.com/750/TEMPLATE/350512/1.jpg",
+    price: 259,
+    size: "10.5",
+    brands_id: 1,
+    category_id: 10,
+  },  {
+    productName: "9060 'SUEDE PACK - SEA SALT'",
+    productDescription:
+      "Paying homage to Michael Jordan's alma mater, this colorway of the Air Jordan 1 Retro Low OG features a simple and clean 'UNC' colorway. A full leather upper features a white base with black overlays on the forefoot and lace area, but a vivid Dark Powder Blue on the back heel area. A black Swoosh frames the profile, while a black Wings logo can be found on the back heel piece. A crisp white midsole gives way to a UNC rubber outsole, completing the look.",
+    image: "https://cdn.flightclub.com/750/TEMPLATE/368690/1.jpg",
+    price: 218,
+    size: "10.5",
+    brands_id: 1,
+    category_id: 10,
+  },  {
+    productName: "9060 'RAIN CLOUD'",
+    productDescription:
+      "Paying homage to Michael Jordan's alma mater, this colorway of the Air Jordan 1 Retro Low OG features a simple and clean 'UNC' colorway. A full leather upper features a white base with black overlays on the forefoot and lace area, but a vivid Dark Powder Blue on the back heel area. A black Swoosh frames the profile, while a black Wings logo can be found on the back heel piece. A crisp white midsole gives way to a UNC rubber outsole, completing the look.",
+    image: "https://cdn.flightclub.com/750/TEMPLATE/333745/1.jpg",
+    price: 163,
+    size: "10.5",
+    brands_id: 1,
+    category_id: 10,
+  },  {
+    productName: "550 'SEA SALT'",
+    productDescription:
+      "Paying homage to Michael Jordan's alma mater, this colorway of the Air Jordan 1 Retro Low OG features a simple and clean 'UNC' colorway. A full leather upper features a white base with black overlays on the forefoot and lace area, but a vivid Dark Powder Blue on the back heel area. A black Swoosh frames the profile, while a black Wings logo can be found on the back heel piece. A crisp white midsole gives way to a UNC rubber outsole, completing the look.",
+    image: "https://cdn.flightclub.com/750/TEMPLATE/298152/1.jpg",
+    price: 139,
+    size: "10.5",
+    brands_id: 1,
+    category_id: 10,
+  },  {
+    productName: "9060 'MOON DAZE'",
+    productDescription:
+      "Paying homage to Michael Jordan's alma mater, this colorway of the Air Jordan 1 Retro Low OG features a simple and clean 'UNC' colorway. A full leather upper features a white base with black overlays on the forefoot and lace area, but a vivid Dark Powder Blue on the back heel area. A black Swoosh frames the profile, while a black Wings logo can be found on the back heel piece. A crisp white midsole gives way to a UNC rubber outsole, completing the look.",
+    image: "https://cdn.flightclub.com/750/TEMPLATE/365668/1.jpg",
+    price: 506,
+    size: "10.5",
+    brands_id: 1,
+    category_id: 10,
+  },  {
+    productName: "550 'WHITE GREEN'",
+    productDescription:
+      "Paying homage to Michael Jordan's alma mater, this colorway of the Air Jordan 1 Retro Low OG features a simple and clean 'UNC' colorway. A full leather upper features a white base with black overlays on the forefoot and lace area, but a vivid Dark Powder Blue on the back heel area. A black Swoosh frames the profile, while a black Wings logo can be found on the back heel piece. A crisp white midsole gives way to a UNC rubber outsole, completing the look.",
+    image: "https://cdn.flightclub.com/750/TEMPLATE/271892/1.jpg",
+    price: 162,
+    size: "10.5",
+    brands_id: 1,
+    category_id: 10,
+  },  {
+    productName: "2002R 'PROTECTION PACK - NAVY'",
+    productDescription:
+      "Paying homage to Michael Jordan's alma mater, this colorway of the Air Jordan 1 Retro Low OG features a simple and clean 'UNC' colorway. A full leather upper features a white base with black overlays on the forefoot and lace area, but a vivid Dark Powder Blue on the back heel area. A black Swoosh frames the profile, while a black Wings logo can be found on the back heel piece. A crisp white midsole gives way to a UNC rubber outsole, completing the look.",
+    image: "https://cdn.flightclub.com/750/TEMPLATE/357672/1.jpg",
+    price: 230,
+    size: "10.5",
+    brands_id: 1,
+    category_id: 10,
+  },  {
+    productName: "2002R 'PROTECTION PACK - PINK'",
+    productDescription:
+      "Paying homage to Michael Jordan's alma mater, this colorway of the Air Jordan 1 Retro Low OG features a simple and clean 'UNC' colorway. A full leather upper features a white base with black overlays on the forefoot and lace area, but a vivid Dark Powder Blue on the back heel area. A black Swoosh frames the profile, while a black Wings logo can be found on the back heel piece. A crisp white midsole gives way to a UNC rubber outsole, completing the look.",
+    image: "https://cdn.flightclub.com/750/TEMPLATE/304640/1.jpg",
+    price: 401,
+    size: "10.5",
+    brands_id: 1,
+    category_id: 10,
+  },  {
+    productName: "2002R 'PROTECTION PACK - SLATE GREY'",
+    productDescription:
+      "Paying homage to Michael Jordan's alma mater, this colorway of the Air Jordan 1 Retro Low OG features a simple and clean 'UNC' colorway. A full leather upper features a white base with black overlays on the forefoot and lace area, but a vivid Dark Powder Blue on the back heel area. A black Swoosh frames the profile, while a black Wings logo can be found on the back heel piece. A crisp white midsole gives way to a UNC rubber outsole, completing the look.",
+    image: "https://cdn.flightclub.com/750/TEMPLATE/357673/1.jpg",
+    price: 260,
+    size: "10.5",
+    brands_id: 1,
+    category_id: 10,
+  },  {
+    productName: "WMNS 550 'BLUE HAZE'",
+    productDescription:
+      "Paying homage to Michael Jordan's alma mater, this colorway of the Air Jordan 1 Retro Low OG features a simple and clean 'UNC' colorway. A full leather upper features a white base with black overlays on the forefoot and lace area, but a vivid Dark Powder Blue on the back heel area. A black Swoosh frames the profile, while a black Wings logo can be found on the back heel piece. A crisp white midsole gives way to a UNC rubber outsole, completing the look.",
+    image: "https://cdn.flightclub.com/750/TEMPLATE/351609/1.jpg",
+    price: 176,
+    size: "10.5",
+    brands_id: 1,
+    category_id: 10,
+  },  {
+    productName: "530 'WHITE NATURAL INDIGO'",
+    productDescription:
+      "Paying homage to Michael Jordan's alma mater, this colorway of the Air Jordan 1 Retro Low OG features a simple and clean 'UNC' colorway. A full leather upper features a white base with black overlays on the forefoot and lace area, but a vivid Dark Powder Blue on the back heel area. A black Swoosh frames the profile, while a black Wings logo can be found on the back heel piece. A crisp white midsole gives way to a UNC rubber outsole, completing the look.",
+    image: "https://cdn.flightclub.com/750/TEMPLATE/223935/1.jpg",
+    price: 135,
+    size: "10.5",
+    brands_id: 1,
+    category_id: 10,
+  },
+
 
 ];
 
