@@ -12,10 +12,20 @@ import Palamino from "../logo/Palamino.jpg";
 export default function Home() {
   const [products, setProducts] = useState([]);
 
+
+  const jordanOne = products.filter((air) => {
+    return air.productName.includes("AIR JORDAN 1");
+  });
+
+  const yeezy = products.filter((yeezy) => {
+    return yeezy.productName.includes("YEEZY");
+  });
+
+
   const [newProducts, setNewProducts] = useState([]);
-  const [yeezyProducts, setYeezyProducts] = useState([]);
-  const [airJordanOne, setAirJordanOne] = useState([]);
-  const [yeezy, setYeezy] = useState([]);
+  // const [yeezyProducts, setYeezyProducts] = useState([]);
+  // const [airJordanOne, setAirJordanOne] = useState([]);
+  // const [yeezy, setYeezy] = useState([]);
   useEffect(() => {
     async function fetchData() {
       try {
@@ -32,47 +42,50 @@ export default function Home() {
         console.log(err, "err");
       }
     }
+
     fetchData();
-    async function fetchDataAirJordan() {
-      try {
-        const getProducts = await fetch(
-          "http://localhost:3001/api/category/parent/1",
-          {
-            method: "GET",
-            headers: { "Content-type": "application/json" },
-          }
-        );
-        const res = await getProducts.json();
-        //  console.log(res)
 
-        setNewProducts(res[0].products);
-        // console.log(newProducts, "airjordan1");
-       
-        const jordanOne = newProducts.filter((air) => {
-          return air.productName.includes("AIR JORDAN 1");
-        });
-
-        const jEight = jordanOne.slice("", 8);
-        // console.log(jordanOne,"kj")
-        setAirJordanOne(jEight);
-
-        setYeezyProducts(res[2].products);
-        const yeezy = yeezyProducts.filter((yeezy) => {
-          return yeezy.productName.includes("YEEZY");
-        });
-
-        // console.log(yeezyProducts,"yya")
-        const yeezyEight = yeezy.slice("", 8);
-        // console.log(jordanOne,"kj")
-        setYeezy(yeezyEight);
-
-        // setNewProducts(res);
-      } catch (err) {
-        console.log(err, "err");
-      }
-    }
     fetchDataAirJordan();
   }, []);
+
+  async function fetchDataAirJordan() {
+    try {
+      const getProducts = await fetch(
+        "http://localhost:3001/api/category/parent/1",
+        {
+          method: "GET",
+          headers: { "Content-type": "application/json" },
+        }
+      );
+      const res = await getProducts.json();
+      //  console.log(res)
+
+      setNewProducts(res[0].products);
+      // console.log(newProducts, "airjordan1");
+
+      // const jordanOne = res[0].products.filter((air) => {
+      //   return air.productName.includes("AIR JORDAN 1");
+      // });
+
+      // const jEight = jordanOne.slice("", 8);
+      // // console.log(jordanOne,"kj")
+      // setAirJordanOne(jEight);
+
+      // setYeezyProducts(res[2].products);
+      // const yeezy = res[2].products.filter((yeezy) => {
+      //   return yeezy.productName.includes("YEEZY");
+      // });
+
+      // // console.log(yeezyProducts,"yya")
+      // const yeezyEight = yeezy.slice("", 8);
+      // // console.log(jordanOne,"kj")
+      // setYeezy(yeezyEight);
+
+      // setNewProducts(res);
+    } catch (err) {
+      console.log(err, "err");
+    }
+  }
 
   const result = products.slice(0, 8);
 
@@ -95,7 +108,7 @@ export default function Home() {
     );
   });
 
-  const newReleaseCardJordanOne = airJordanOne.map((newrelease) => {
+  const newReleaseCardJordanOne = jordanOne.slice(0,8).map((newrelease) => {
     return (
       <Link
         to={`/single/${newrelease.id}`}
@@ -114,7 +127,7 @@ export default function Home() {
     );
   });
 
-  const newReleaseCardYeezy = yeezy.map((newrelease) => {
+  const newReleaseCardYeezy = yeezy.slice(0,8).map((newrelease) => {
     return (
       <Link
         to={`/single/${newrelease.id}`}
