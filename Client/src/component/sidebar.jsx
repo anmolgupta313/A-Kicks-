@@ -9,17 +9,16 @@ export default function Sidebar({
   priceProducts,
 }) {
   const [priceValue, setPriceValue] = useState(null);
-  useEffect(() => {
-    categoryChange(value);
-    // priceFilter(priceValue)
-  }, [value]);
+
 
   function handlechangeValue(e) {
-    setValue(e.target.value);
+    // setValue(e.target.value);
+    categoryChange(e.target.value)
   }
 
   function handlePriceValue(e) {
-    setPriceValue(e.target.value);
+    setPriceValue(e.target.value)
+    priceFilter(e.target.value);
   }
 
   console.log(priceValue, "v");
@@ -33,17 +32,25 @@ export default function Sidebar({
     return setProducts(filterCategory);
   }
 
-  // function priceFilter(priceValue) {
-  //   const priceFilterArray = priceProducts.filter((value) => {
-  //     if (priceValue >= value.price) {
-  //       return value.price <= priceValue;
-  //     }
-  //   });
-  //   console.log(priceFilterArray, "pricefilterarray");
-  //   setProducts(priceFilterArray);
-  // }
+  async function priceFilter(priceValue) {
+    const priceFilterArray = await priceProducts.filter((value) => {
+      if (priceValue >= value.price) {
+        return value.price <= priceValue;
+      }
+    });
+    console.log(priceFilterArray, "pricefilterarray");
 
-  // console.log(products,"array")
+    if (
+      priceValue == 200 ||
+      priceValue == 400 ||
+      priceValue == 600 ||
+      priceValue == 2500
+    ) {
+      setProducts(priceFilterArray);
+    }
+  }
+
+  console.log(products, "array");
 
   return (
     <div className="sidebar-main-div">

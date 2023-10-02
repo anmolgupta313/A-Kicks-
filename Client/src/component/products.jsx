@@ -38,6 +38,7 @@ export default function Products() {
         value={value}
         setValue={setValue}
         setProducts={setProducts}
+        setNewProducts={setNewProducts}
         newProducts={newProducts}
         priceProducts={priceProducts}
       />
