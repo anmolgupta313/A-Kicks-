@@ -183,7 +183,7 @@ export default function Home() {
           </div>
           <div className="related-sneakers-sub-div">{newReleaseCardYeezy}</div>
           <div className="btn-main-page-releated">
-            <button>SHOP Now</button>
+            <button>Shop Now</button>
           </div>
         </div>
       </div>
@@ -197,7 +197,7 @@ export default function Home() {
             {newReleaseCardJordanOne}
           </div>
           <div className="btn-main-page-releated">
-            <button>SHOP Now</button>
+            <button>Shop Now</button>
           </div>
         </div>
       </div>
