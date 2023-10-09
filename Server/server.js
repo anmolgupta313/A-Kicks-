@@ -16,12 +16,14 @@ app.use(cors());
 app.use(cookieParser());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
+app.use(express.static(path.join(__dirname, 'public')));
+
 
 app.use(routes);
 
 // sync sequelize models to the database, then turn on the server
 sequelize.sync({ force: true }).then(() => {
-  app.listen(process.env.port || PORT, () => {
+  app.listen(PORT, () => {
     console.log(`App listening on port !`);
   });
 });
