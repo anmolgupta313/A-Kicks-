@@ -23,3 +23,29 @@
     font-size: 18px;
     font-weight: 700;
 }
+
+@media(max-width:786px){
+    .sidebar-main-div{
+        width: 80% ;
+        margin-top: 0px;
+        margin: 0px;
+  
+    }
+
+    .sidebar-sub-div {
+        background: black;
+        color: white;
+    }
+    .x-div-toggel {
+        display: flex;
+        justify-content: flex-end;
+    }
+    .x-div-toggel img {
+        width: 4%;
+        padding: 20px;
+    }
+    button.filter-btn {
+        width: 98%;
+        padding: 5px;
+    }
+}

@@ -94,6 +94,7 @@ img {
     color: white;
     border-radius: 7px;
     width: 100%;
+    cursor: pointer;
 }
 
 .add-to-cart-div {
@@ -175,7 +176,7 @@ img {
   }
 
   .relared-sneakers-card-div {
-    width: 87% !important;
+    width: 68% !important;
     }
 
     .search-result-main-div{

@@ -6,19 +6,19 @@ import Auth from "../utils/auth";
 import hamburger from"../logo/hamburger.png"
 import X from"../logo/x.png"
 // import { use } from "../../../Server/routes/api/products-routes";
-export default function Header({ token }) {
+export default function Header({ token, windowDimenssion,detectSize }) {
   const [inputValue, SetInputValue] = useState("");
   const [searchResultValue, setSearchResultValue] = useState([]);
   const [menuToggle,setMenuToggel]= useState(false)
-  const [windowDimenssion, detectW]= useState({
-    minWidth:window.innerWidth
-  })
+//   const [windowDimenssion, detectW]= useState({
+//     minWidth:window.innerWidth
+//   })
 
-  const detectSize=()=>{
-    detectW({
-      minWidth:window.innerWidth
-    })
-}
+//   const detectSize=()=>{
+//     detectW({
+//       minWidth:window.innerWidth
+//     })
+// }
   useEffect(() => {
     window.addEventListener("resize",detectSize)
 

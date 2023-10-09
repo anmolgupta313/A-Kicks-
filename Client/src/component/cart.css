@@ -76,3 +76,18 @@ color: white;
 border-radius: 7px;
 width: 100%;
 }
+
+@media(max-width:786px){
+    .cart-main-div{
+        padding: 10px 29px;
+    }
+
+    .single-cart-main-div{
+        flex-wrap: wrap;
+        row-gap: 10px;
+    }
+    .subtotal{
+        width: 93%;
+       
+    }
+}

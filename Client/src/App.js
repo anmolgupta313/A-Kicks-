@@ -21,7 +21,14 @@ import auth from "./utils/auth";
 function App() {
   const [token,setToken] = useState()
 
+const [windowDimenssion, detectW]= useState({
+    minWidth:window.innerWidth
+  })
 
+  const detectSize=()=>{
+    detectW({
+      minWidth:window.innerWidth
+    })}
 
   useEffect(()=>{
     const getToken= auth.loggedIn()
@@ -30,12 +37,12 @@ function App() {
   },[token])
 return(
 <BrowserRouter>
-<Header token={token} />
+<Header token={token} windowDimenssion={windowDimenssion} detectSize={detectSize} />
 
 <div >
   <Routes>
   <Route path="/" Component={Home} />
-  <Route path="/products" Component={Products} />
+  <Route path="/products"element={<Products windowDimenssion={windowDimenssion} detectSize={detectSize} />} />
   <Route path="/signUp" Component={Signup} />
   <Route path="/cart" Component={Cart} />
   <Route path="/logIn" element={<Login token={token} setToken={setToken}/>} />

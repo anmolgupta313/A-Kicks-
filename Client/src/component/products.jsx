@@ -5,13 +5,15 @@ import SingleProduct from "./singleProduct";
 import "./products.css";
 
 import Sidebar from "./sidebar";
-export default function Products() {
+export default function Products({windowDimenssion, detectSize}) {
   const [value, setValue] = useState(null);
   // const [array,setArray]= useState([])
   const [products, setProducts] = useState([]);
   const [newProducts, setNewProducts] = useState([]);
   const [priceProducts, setPriceProducts] = useState([]);
   useEffect(() => {
+
+    
     async function fetchData() {
       try {
         const getProducts = await fetch("http://localhost:3001/api/products", {
@@ -29,6 +31,8 @@ export default function Products() {
       }
     }
     fetchData();
+
+    
   }, []);
   console.log(products, "Prod");
   return (
@@ -41,6 +45,8 @@ export default function Products() {
         setNewProducts={setNewProducts}
         newProducts={newProducts}
         priceProducts={priceProducts}
+        windowDimenssion={windowDimenssion}
+        detectSize={detectSize}
       />
 
       <div className="main-products-div">

@@ -76,3 +76,12 @@ select.select {
     background-color: #6bb9e6;
     color: white;
 }
+
+@media(max-width:786px){
+    .main-div-checkout{
+        padding: 0px 20px 30px 20px ;
+    }
+    .main-div-form{
+        width: 100%;
+    }
+}

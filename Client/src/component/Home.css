@@ -51,7 +51,15 @@
   padding: 20px 120px 50px 120px;
 width: 80%;
 }
-
+/* @media(width:768px){
+  .heading-div{
+    top: 160px;
+    left: 50px;
+  }
+  .heading-div h1{
+    font-size: 30px;
+  }
+} */
 @media(max-width:760px){
   .heading-div {
     position: absolute;

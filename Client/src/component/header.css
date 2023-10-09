@@ -77,6 +77,7 @@
 .search-result-p-div p {
   font-size: 13px;
   font-weight: 400;
+  color: black;
 }
 
 /* mobile responsive */
@@ -130,5 +131,17 @@
     left: 232px;
     top: 9px;
     padding: 7px;
+  }
+
+  .search-result-main-div{
+    right: 0px;
+    top:266px !important;
+  }
+}
+
+@media(width:768px){
+  .main-nav-bar-links-div{
+    width: 44%;
+    left: 413px;
   }
 }
