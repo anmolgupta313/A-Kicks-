@@ -19,6 +19,17 @@ app.use(express.urlencoded({ extended: true }));
 
 app.use(routes);
 
+app.post("/create-checkout-session", async (req, res) => {
+  try {
+    // const session = await stripe.checkout.session.create(req.body);
+
+    // res.status(200).json({ url: session.url });
+    res.json({url:"HI"})
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+// const stripe = require("stripe")
 // sync sequelize models to the database, then turn on the server
 sequelize.sync({ force: true }).then(() => {
   app.listen(process.env.port || PORT, () => {

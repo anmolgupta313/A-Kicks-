@@ -1,8 +1,14 @@
 // import { Link } from "react-router-dom";
+import { CardElement,PaymentElement,useElements, useStripe } from "@stripe/react-stripe-js";
 import { useState } from "react";
+// import Stripe from "stripe";
 import "../component/checkout.css"
+
+// import {PaymentElement} from '@stripe/react-stripe-js';
 export default function Checkout() {
 
+// const elements= useElements()
+// const stripe= useStripe()
     const [shippingAddress, setShippingAddress]= useState({"email":"",
 "firstName":"",
 "lastName":"",
@@ -19,6 +25,16 @@ return{...prev,
 [e.target.name]:e.target.value}
     })
 }
+// const {clientSecret} = fetch("api/cart/create-payment-intent",{
+//   method:"POST",
+//   headers:{
+//     'Content-Type':'application/json'
+//   },
+//   body:JSON.stringify({
+//     total:"2000",
+//   })
+// }).then(r=>r.json())
+
 
 const userId= localStorage.getItem("userId")
 async function  postCheckout(){
@@ -112,8 +128,9 @@ console.log(shippingAddress,"asaddess")
           <div className="name-div">
             <label>Shipping Address<input type="text" name="shippingAddress" onChange={inputChange} value={shippingAddress.shippingAddress}></input></label>
           </div>
-
+          {/* <PaymentElement /> */}
           <div className="div-btn"><button>Book Order</button></div>
+          
         </form>
       </div>
     </div>
